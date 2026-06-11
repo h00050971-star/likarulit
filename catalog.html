@@ -86,8 +86,8 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 @media(max-width:600px){.cars-grid{grid-template-columns:1fr}}
 .car-card{background:#161616;border-radius:18px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .car-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.5)}
-.car-vis{height:200px;background-size:cover;background-position:center;position:relative}
-.car-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.7))}
+.car-vis{height:200px;background-size:contain;background-position:center;background-color:#141414;background-repeat:no-repeat;position:relative}
+.car-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.65))}
 .car-badge{position:absolute;top:12px;left:12px;z-index:1;padding:4px 10px;border-radius:100px;
   background:rgba(0,0,0,.5);backdrop-filter:blur(8px);font-size:11px;color:#ccc;font-weight:500}
 .car-body{padding:18px}
@@ -133,9 +133,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат автомобиля Audi TT</div>
+    <div class="car-name">Прокат Audi TT</div>
     <div class="car-foot">
-      <div class="car-price"><b>6 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 6 900 ₽</b><small>в сутки</small></div>
       <a href="cars/audi-tt.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -145,9 +145,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто Audi TT FV, Ауди тт</div>
+    <div class="car-name">Прокат Audi TT FV</div>
     <div class="car-foot">
-      <div class="car-price"><b>7 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 900 ₽</b><small>в сутки</small></div>
       <a href="cars/audi-tt-fv.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -157,9 +157,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто BMW 230 Кабриолет</div>
+    <div class="car-name">Прокат BMW 230 Кабриолет</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 800 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-230-kabriolet.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -169,9 +169,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат BMW 4 Gran Coupe</div>
+    <div class="car-name">Прокат BMW 4 Gran Coupe</div>
     <div class="car-foot">
-      <div class="car-price"><b>4 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-4-gran-coupe.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -181,9 +181,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">﻿ Аренда авто, Прокат авто BMW 430i 2.0 Gran Coupe</div>
+    <div class="car-name">Прокат BMW 430i 2.0 Gran Coupe</div>
     <div class="car-foot">
-      <div class="car-price"><b>2800 ₽/день</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2800 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-430i-2-0-gran-coupe.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -193,9 +193,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда/Прокат кабриолета BMW 430i F33</div>
+    <div class="car-name">Прокат BMW 430i F33</div>
     <div class="car-foot">
-      <div class="car-price"><b>5 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 900 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-430i-f33.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -205,9 +205,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто BMW 5 G30 2.0</div>
+    <div class="car-name">Прокат BMW 5 G30 2.0</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 800 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-5-g30-2-0.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -217,9 +217,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат автомобиля BMW 5 G30 M Sport LCI</div>
+    <div class="car-name">Прокат BMW 5 G30 M Sport LCI</div>
     <div class="car-foot">
-      <div class="car-price"><b>4 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-5-g30-m-sport-lci.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -229,9 +229,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Прокат аренда BMW 520D G30 M sport</div>
+    <div class="car-name">Прокат BMW 520D G30 M sport</div>
     <div class="car-foot">
-      <div class="car-price"><b>5 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-520d-g30-m-sport.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -241,9 +241,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля BMW 520i</div>
+    <div class="car-name">Прокат BMW 520i</div>
     <div class="car-foot">
-      <div class="car-price"><b>5 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 800 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-520i.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -253,9 +253,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто BMW 520i АКПП</div>
+    <div class="car-name">Прокат BMW 520i АКПП</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-520i-akpp.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -265,9 +265,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто BMW 7 740Li</div>
+    <div class="car-name">Прокат BMW 7 740Li</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 000 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 000 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-7-740li.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -277,9 +277,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля BMW 7 750Li</div>
+    <div class="car-name">Прокат BMW 7 750Li</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-7-750li.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -289,9 +289,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто BMW M5 sport</div>
+    <div class="car-name">Прокат BMW M5 Sport</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-m5-sport.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -301,9 +301,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто BMW М5 Sport 4WD</div>
+    <div class="car-name">Прокат BMW M5 Sport 4WD</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 900 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-m5-sport-4wd.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -313,9 +313,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто BMW X5 4.0 xDrive</div>
+    <div class="car-name">Прокат BMW X5 4.0 xDrive</div>
     <div class="car-foot">
-      <div class="car-price"><b>11 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 11 800 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-x5-4-0-xdrive.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -325,9 +325,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля BMW X5 G05</div>
+    <div class="car-name">Прокат BMW X5 G05</div>
     <div class="car-foot">
-      <div class="car-price"><b>9 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 9 900 ₽</b><small>в сутки</small></div>
       <a href="cars/bmw-x5-g05.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -337,9 +337,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто Сhangan Lamore</div>
+    <div class="car-name">Прокат Changan Lamore</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 100 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 100 ₽</b><small>в сутки</small></div>
       <a href="cars/changan-lamore.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -349,9 +349,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат автомобиля changan UNI-T</div>
+    <div class="car-name">Прокат Changan UNI-T</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
       <a href="cars/changan-uni-t.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -361,9 +361,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто Сhangan UNI-T</div>
+    <div class="car-name">Прокат Changan UNI-T 2</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 100 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 100 ₽</b><small>в сутки</small></div>
       <a href="cars/changan-uni-t-2.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -373,9 +373,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат автомобиля changan UNI-V</div>
+    <div class="car-name">Прокат Changan UNI-V</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
       <a href="cars/changan-uni-v.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -385,9 +385,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Chery Arrizo 8</div>
+    <div class="car-name">Прокат Chery Arrizo 8</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
       <a href="cars/chery-arrizo-8.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -397,9 +397,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто Chery Arrizo 8 Pro</div>
+    <div class="car-name">Прокат Chery Arrizo 8 Pro</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 100 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 100 ₽</b><small>в сутки</small></div>
       <a href="cars/chery-arrizo-8-pro.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -409,9 +409,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат Chery Tiggo 7 pro max</div>
+    <div class="car-name">Прокат Chery Tiggo 7 pro max</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
       <a href="cars/chery-tiggo-7-pro-max.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -421,9 +421,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Семейные</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто Chery Tiggo 8 Pro e+</div>
+    <div class="car-name">Прокат Chery Tiggo 8 Pro e+</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
       <a href="cars/chery-tiggo-8-pro-e.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -433,9 +433,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Семейные</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Chery Tiggo 8 pro max</div>
+    <div class="car-name">Прокат Chery Tiggo 8 pro max</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
       <a href="cars/chery-tiggo-8-pro-max.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -445,9 +445,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Семейные</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат Chery Tiggo Pro Plug-in Hybrid</div>
+    <div class="car-name">Прокат Chery Tiggo Pro Plug-in Hybrid</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
       <a href="cars/chery-tiggo-pro-plug-in-hybrid.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -457,9 +457,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Chevrolet Camaro</div>
+    <div class="car-name">Прокат Chevrolet Camaro</div>
     <div class="car-foot">
-      <div class="car-price"><b>5 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 900 ₽</b><small>в сутки</small></div>
       <a href="cars/chevrolet-camaro.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -469,9 +469,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто Chevrolet Camaro GT 8</div>
+    <div class="car-name">Прокат Chevrolet Camaro GT 8</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
       <a href="cars/chevrolet-camaro-gt-8.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -481,9 +481,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Chevrolet Trax</div>
+    <div class="car-name">Прокат Chevrolet Trax</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
       <a href="cars/chevrolet-trax.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -493,9 +493,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля кроссовера ford Kuga</div>
+    <div class="car-name">Прокат Ford Kuga</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
       <a href="cars/ford-kuga.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -505,9 +505,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат кабриолета Ford Mustang</div>
+    <div class="car-name">Прокат Ford Mustang</div>
     <div class="car-foot">
-      <div class="car-price"><b>7 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 900 ₽</b><small>в сутки</small></div>
       <a href="cars/ford-mustang.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -517,9 +517,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кабриолеты</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда авто, Прокат авто Ford Mustang Shelby GT</div>
+    <div class="car-name">Прокат Ford Mustang Shelby GT</div>
     <div class="car-foot">
-      <div class="car-price"><b>6 000 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 6 000 ₽</b><small>в сутки</small></div>
       <a href="cars/ford-mustang-shelby-gt.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -529,9 +529,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Geely Coolray</div>
+    <div class="car-name">Прокат Geely Coolray</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
       <a href="cars/geely-coolray.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -541,9 +541,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Haval Jolion</div>
+    <div class="car-name">Прокат Haval Jolion</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
       <a href="cars/haval-jolion.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -553,9 +553,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Семейные</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда минивена Kia Carnival</div>
+    <div class="car-name">Прокат Kia Carnival</div>
     <div class="car-foot">
-      <div class="car-price"><b>4 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
       <a href="cars/kia-carnival.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -565,9 +565,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат автомобиля Lexus ES250</div>
+    <div class="car-name">Прокат Lexus ES250</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
       <a href="cars/lexus-es250.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -577,9 +577,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Прокат аренда автомобиля Lexus GS350</div>
+    <div class="car-name">Прокат Lexus GS350</div>
     <div class="car-foot">
-      <div class="car-price"><b>4 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
       <a href="cars/lexus-gs350.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -589,9 +589,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Mercedes E200</div>
+    <div class="car-name">Прокат Mercedes E200</div>
     <div class="car-foot">
-      <div class="car-price"><b>4 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small></div>
       <a href="cars/mercedes-e200.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -601,9 +601,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда кроссовера Mercedes GLK220D</div>
+    <div class="car-name">Прокат Mercedes GLK220D</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 800 ₽</b><small>в сутки</small></div>
       <a href="cars/mercedes-glk220d.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -613,9 +613,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">BMW и премиум</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Mercedes-Benz E200 black</div>
+    <div class="car-name">Прокат Mercedes-Benz E200 black</div>
     <div class="car-foot">
-      <div class="car-price"><b>4 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small></div>
       <a href="cars/mercedes-benz-e200-black.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -625,9 +625,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда автомобиля Nissan Patrol</div>
+    <div class="car-name">Прокат Nissan Patrol</div>
     <div class="car-foot">
-      <div class="car-price"><b>4 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small></div>
       <a href="cars/nissan-patrol.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -637,9 +637,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Семейные</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда микроавтобуса, Прокат минивэн Noah Гибрид</div>
+    <div class="car-name">Прокат Noah Гибрид</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
       <a href="cars/noah-gibrid.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -649,9 +649,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Кроссоверы</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда прокат Toyota Camry</div>
+    <div class="car-name">Прокат Toyota Camry</div>
     <div class="car-foot">
-      <div class="car-price"><b>3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
       <a href="cars/toyota-camry.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -661,9 +661,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Семейные</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда минивена Toyota Esquire</div>
+    <div class="car-name">Прокат Toyota Esquire</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
       <a href="cars/toyota-esquire.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -673,9 +673,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-badge">Семейные</div>
   </div>
   <div class="car-body">
-    <div class="car-name">Аренда микроавтобуса, Прокат минивен Serena</div>
+    <div class="car-name">Прокат Toyota Serena</div>
     <div class="car-foot">
-      <div class="car-price"><b>2 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 2 900 ₽</b><small>в сутки</small></div>
       <a href="cars/toyota-serena.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>

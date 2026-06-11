@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Аренда Аренда авто, Прокат авто BMW 520i АКПП в Сочи | Лика Рулит</title>
-<meta name="description" content="Прокат Аренда авто, Прокат авто BMW 520i АКПП в Сочи от 2 500 ₽ за день. Подача в аэропорт Адлер, выезд в Абхазию. Без посредников, ответ за 10 минут.">
-<meta property="og:title" content="Аренда Аренда авто, Прокат авто BMW 520i АКПП в Сочи | Лика Рулит">
-<meta property="og:description" content="Прокат Аренда авто, Прокат авто BMW 520i АКПП в Сочи от 2 500 ₽ за день. Подача в аэропорт Адлер, выезд в Абхазию. Без посредников, ответ за 10 минут.">
+<title>Аренда BMW 520i АКПП в Сочи | Лика Рулит</title>
+<meta name="description" content="Прокат BMW 520i АКПП в Сочи от 2 500 ₽. Подача в аэропорт Адлер, выезд в Абхазию. Без посредников, ответ за 10 минут.">
+<meta property="og:title" content="Аренда BMW 520i АКПП в Сочи | Лика Рулит">
+<meta property="og:description" content="Прокат BMW 520i АКПП в Сочи от 2 500 ₽. Подача в аэропорт Адлер, выезд в Абхазию. Без посредников, ответ за 10 минут.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -80,20 +80,22 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .breadcrumb span{color:#444}
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
-.gallery{position:sticky;top:96px;overflow:hidden}
-.main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;border-radius:18px;background:#1a1a1a;
-  display:block;cursor:zoom-in;transition:opacity .3s}
-.photo-wrap{position:relative;border-radius:18px;overflow:hidden}
+.gallery{position:sticky;top:96px}
+.photo-wrap{position:relative;border-radius:18px;overflow:hidden;background:#141414;aspect-ratio:4/3}
+.main-photo{width:100%;height:100%;object-fit:contain;object-position:center;display:block;
+  cursor:zoom-in;transition:opacity .3s}
 .photo-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;
   border-radius:50%;background:rgba(0,0,0,.55);border:none;color:#fff;font-size:26px;
   cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;
   transition:background .2s,transform .25s var(--ease);line-height:1;padding:0}
 .photo-nav:hover{background:rgba(200,150,12,.85);transform:translateY(-50%) scale(1.08)}
 .photo-prev{left:12px}.photo-next{right:12px}
-.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;overflow:hidden;border-radius:10px}
-.thumb{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center;
-  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent;display:block}
-.thumb.active,.thumb:hover{opacity:1;transform:scale(1.04);border-color:var(--gold)}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;background:var(--dark-2)}
+.thumb{aspect-ratio:1;border-radius:8px;background-size:contain;background-position:center;
+  background-color:#141414;background-repeat:no-repeat;
+  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;
+  outline:2px solid transparent;outline-offset:-2px;display:block}
+.thumb.active,.thumb:hover{opacity:1;transform:scale(1.04);outline-color:var(--gold)}
 .car-info{}
 .cat-badge{display:inline-block;padding:5px 14px;border-radius:100px;border:1px solid var(--gold);
   color:var(--gold);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
@@ -124,8 +126,8 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 @media(max-width:600px){.cars-grid{grid-template-columns:1fr}}
 .car-card{background:#161616;border-radius:18px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .car-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.5)}
-.car-vis{height:180px;background-size:cover;background-position:center 30%;position:relative}
-.car-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.7))}
+.car-vis{height:180px;background-size:contain;background-position:center;background-color:#141414;background-repeat:no-repeat;position:relative}
+.car-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.65))}
 .car-badge{position:absolute;top:12px;left:12px;z-index:1;padding:4px 10px;border-radius:100px;
   background:rgba(0,0,0,.5);backdrop-filter:blur(8px);font-size:11px;color:#ccc;font-weight:500}
 .car-body{padding:18px}
@@ -162,12 +164,12 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
         <span>›</span>
         <a href="../catalog.html">Каталог</a>
         <span>›</span>
-        <span style="color:#fff">Аренда авто, Прокат авто BMW 520i АКПП</span>
+        <span style="color:#fff">BMW 520i АКПП</span>
       </div>
       <div class="car-layout">
         <div class="gallery">
           <div class="photo-wrap">
-            <img class="main-photo" id="mainPhoto" src="../photos/bmw-520i-akpp/photo_01.jpg" alt="Аренда Аренда авто, Прокат авто BMW 520i АКПП в Сочи" loading="eager">
+            <img class="main-photo" id="mainPhoto" src="../photos/bmw-520i-akpp/photo_01.jpg" alt="Аренда BMW 520i АКПП в Сочи" loading="eager">
             <button class="photo-nav photo-prev" onclick="navPhoto(-1)" aria-label="Назад">&#8249;</button>
             <button class="photo-nav photo-next" onclick="navPhoto(1)" aria-label="Вперёд">&#8250;</button>
           </div>
@@ -186,11 +188,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
         </div>
         <div class="car-info">
           <div class="cat-badge">BMW и премиум</div>
-          <h1 class="car-title">Аренда Аренда авто, Прокат авто BMW 520i АКПП<br><span style="color:var(--gold-soft)">в Сочи</span></h1>
+          <h1 class="car-title">Прокат BMW 520i АКПП<br><span style="color:var(--gold-soft)">в Сочи</span></h1>
           <div class="price-block">
             <div>
-              <div class="price-val">2 500 ₽ за день</div>
-              <div class="price-per">минимальный тариф</div>
+              <div class="price-val">от 2 500 ₽</div>
+              <div class="price-per">в сутки</div>
             </div>
             <div class="price-note">Подача в аэропорт Адлер,<br>отель, ж/д вокзал</div>
           </div>
@@ -201,7 +203,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
             <div class="spec-tag">Выезд в Абхазию</div>
           </div>
           <div class="cta-block">
-            <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20Аренда%20авто,%20Прокат%20авто%20BMW%20520i%20АКПП" class="btn btn-gold btn-lg" target="_blank" rel="noopener">
+            <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20BMW%20520i%20АКПП" class="btn btn-gold btn-lg" target="_blank" rel="noopener">
               Написать в WhatsApp
             </a>
             <a href="tel:+79180000000" class="btn btn-ghost btn-lg">+7 918 000-00-00</a>
@@ -223,7 +225,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 Подходит тем, кто много ездит в городе и не хочет думать о переключениях. Комфортная машина для отдыха — без спортивной напряжённости, но с нужной долей динамики на трассе.
 
 Аренда от 2 суток. Залог 15 000 ₽.</div>
-      <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20Аренда%20авто,%20Прокат%20авто%20BMW%20520i%20АКПП" class="btn btn-gold btn-lg" target="_blank" rel="noopener" style="margin-top:8px">
+      <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20BMW%20520i%20АКПП" class="btn btn-gold btn-lg" target="_blank" rel="noopener" style="margin-top:8px">
         Забронировать — ответим за 10 минут
       </a>
     </div>
