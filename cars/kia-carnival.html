@@ -80,12 +80,12 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .breadcrumb span{color:#444}
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
-.gallery{position:sticky;top:96px}
+.gallery{position:sticky;top:96px;overflow:hidden}
 .main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;background:#1a1a1a;
   display:block;cursor:zoom-in;transition:opacity .3s}
-.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;overflow:hidden;border-radius:10px}
 .thumb{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center;
-  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent}
+  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent;display:block}
 .thumb.active,.thumb:hover{opacity:1;transform:scale(1.04);border-color:var(--gold)}
 .car-info{}
 .cat-badge{display:inline-block;padding:5px 14px;border-radius:100px;border:1px solid var(--gold);
@@ -205,18 +205,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <section style="padding:clamp(40px,5vw,72px) 0;background:var(--dark)">
     <div class="wrap">
       <h2 style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:20px;color:#ccc">Об автомобиле</h2>
-      <div class="car-desc">🌴Прoкaт BestCаrsSосhi приветствуeт ваc в нашeм прекраснoм гоpoдe!🌴
-🌍Пpeдлагаем в аpeнду/пpoкaт минивен Kia Carnivаl 2019 АКПП  2.0 литpа  Бензин  Пеpeдний привoд  🌏
-🏖️Kомфoртный и эконoмичный ceмeйный крoсcовер.🏖️
-🎫Ocновнoй тaриф: oт 2-уx cутoк 4 900₽ в сутки (250км в сутки)Залог 10.000🎫
-🪪Apендa пo двум докумeнтaм паспоpт и водительское удостоверение.🪪
-🏞️Возможен выезд в Абхазию, обсуждается индивидуально.🏞️
-💥Детские кресла и зарядки для телефонов предоставляются бесплатно💥
-👶Детское кресло предоставляется по просьбе за ранее.👶
-💧Всегда чистый авто и полный бак.💧
-🗺️ ПОДАЧА В СОЧИ / АДЛЕР / КРАСНУЮ ПОЛЯНУ / ДАГОМЫС / ЛОО / ЛАЗАРЕВСКОЕ / РОЗА ХУТОР.🗺️
-🗾Езда по территории большого Сочи, от Магри до границы с Абхазией (Красная поляна входит в эту территорию) Выезд за пределы оговаривается и оплачивается индивидуально.🗾
-💯Возврат залога без задержек💯Индивидуальный подход к каждому клиенту💯Быстрая подача автомобиля💯</div>
+      <div class="car-desc">Kia Carnival — корейский минивэн высокого класса. Три ряда сидений, электрические сдвижные двери, отдельные кресла второго ряда с регулировкой положения. По уровню комфорта на задних сиденьях конкурирует с бизнес-классом.
+
+Оптимальный выбор для семей с детьми и больших компаний. Подходит для маршрутов в Сочи Парк, Олимпийский парк и в горы — всех привезти с комфортом и с багажом. Просторный, тихий, современный.
+
+Аренда от 2 суток. Залог 15 000 ₽.</div>
       <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20Аренда%20минивена%20Kia%20Carnival" class="btn btn-gold btn-lg" target="_blank" rel="noopener" style="margin-top:8px">
         Забронировать — ответим за 10 минут
       </a>

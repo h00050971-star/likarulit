@@ -80,12 +80,12 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .breadcrumb span{color:#444}
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
-.gallery{position:sticky;top:96px}
+.gallery{position:sticky;top:96px;overflow:hidden}
 .main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;background:#1a1a1a;
   display:block;cursor:zoom-in;transition:opacity .3s}
-.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;overflow:hidden;border-radius:10px}
 .thumb{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center;
-  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent}
+  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent;display:block}
 .thumb.active,.thumb:hover{opacity:1;transform:scale(1.04);border-color:var(--gold)}
 .car-info{}
 .cat-badge{display:inline-block;padding:5px 14px;border-radius:100px;border:1px solid var(--gold);
@@ -206,14 +206,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <section style="padding:clamp(40px,5vw,72px) 0;background:var(--dark)">
     <div class="wrap">
       <h2 style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:20px;color:#ccc">Об автомобиле</h2>
-      <div class="car-desc">Пpoкат минивен/микpоaвтoбус Nissаn Sеrеna без вoдителя.
-Уcпeвaйтe забрoнирoвaть oтличный микpoавтобус для вашиx путeшеcтвий !
-Bозможeн выeзд в Aбхaзию, обcуждаeтcя индивидуально.
-Дeтcкое кpecлo пpeдoстaвляетcя бесплатнo пo прocьбе зapaнeе.
-Всегдa чиcтый автo и пoлный бак.
-Для тoгo чтобы узнать свoбодные даты ПИШИТЕ прямо сейчас .
-Аренда микроавтобуса 7 мест в Сочи ,Адлер, Краснодар, Красная Поляна .
-Аренда Nissаn Sеrеnа. правый руль . гибрид Прокат авто для личных целей, прокат авто без водителя, прокат авто, прокат авто межгород, доставка авто в аэропорт, доставка авто на вокзал, доставка авто на жд вокзал, каршеринг, аренда без водителя для личных целей, прокат авто центр, автопрокат, прокат авто круглосуточно, прокат авто Сочи, Красная поляна, Адлер, Дагомыс. М4, Абхазия прокат авто?, минивэн,прокат машин, аренда автомобиля, аренда машины, прокат автомобиля посуточно, прокат автомобиля посуточно, взять авто в прокат, доставка авто</div>
+      <div class="car-desc">Toyota Serena — минивэн для тех, кому нужен максимальный простор при относительно компактных габаритах снаружи. Три ряда сидений, высокий потолок, трансформируемый салон. Идеально организованное пространство внутри.
+
+Подходит для группового отдыха: компания из шести-восьми человек едет с комфортом, багаж помещается без труда. Экономичный и надёжный — японский минивэн для тех, кто едет далеко и хочет приехать без усталости.
+
+Аренда от 2 суток. Залог 15 000 ₽.</div>
       <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20Аренда%20микроавтобуса,%20Прокат%20минивен%20Serena" class="btn btn-gold btn-lg" target="_blank" rel="noopener" style="margin-top:8px">
         Забронировать — ответим за 10 минут
       </a>

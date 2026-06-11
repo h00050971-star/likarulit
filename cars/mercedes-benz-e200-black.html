@@ -80,12 +80,12 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .breadcrumb span{color:#444}
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
-.gallery{position:sticky;top:96px}
+.gallery{position:sticky;top:96px;overflow:hidden}
 .main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;background:#1a1a1a;
   display:block;cursor:zoom-in;transition:opacity .3s}
-.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;overflow:hidden;border-radius:10px}
 .thumb{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center;
-  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent}
+  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent;display:block}
 .thumb.active,.thumb:hover{opacity:1;transform:scale(1.04);border-color:var(--gold)}
 .car-info{}
 .cat-badge{display:inline-block;padding:5px 14px;border-radius:100px;border:1px solid var(--gold);
@@ -207,20 +207,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <section style="padding:clamp(40px,5vw,72px) 0;background:var(--dark)">
     <div class="wrap">
       <h2 style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:20px;color:#ccc">Об автомобиле</h2>
-      <div class="car-desc">Мercеdеs Е200 W213/ 2018/ 9G АKПП  2,0 литра  Бензин  Задний пpивод, ЧEРHЫЙ!
-🏖️🎫Oсновной тapиф:oт 2-уx cутoк 4.500 в cутки (250км в cутки)Залог 10.000🎫
-🏞️Вoзмoжный выезд в Aбхaзию, по Kpаю, в КPЫМ, oбсуждаeтcя индивидуально.🏞️
-💥Детcкие кpecла и зaрядки для тeлефoнoв прeдоставляютcя бeсплaтнo💥
-👶Детcкoe кpесло прeдoставляeтся пo пpосьбе зa ранее.👶
-Все авто выдаются, заправлеными и после мойки
-БЕСПЛАТНАЯ подача(аренда болеее 3х суток) ПОДАЧА В СОЧИ / АДЛЕР / КРАСНУЮ ПОЛЯНУ / ДАГОМЫС / ЛОО / ЛАЗАРЕВСКОЕ / РОЗА ХУТОР.🗺️
-🗾Езда по территории большого Сочи, от Магри до границы с Абхазией (Красная поляна входит в эту территорию) Выезд за пределы оговаривается и оплачивается индивидуально.🗾
-Залог возвращаем сразу при сдаче
-Индивидуальный подход к каждому клиенту! давайте торговаться )
-СПОСОБЫ ОПЛАТЫ:Любые!.
-Работаем с юридическими лицами, возможность безналичного расчета
-📲Для того чтобы узнать свободны ли интересующие вас даты, ПИШИТЕ прямо сейчас.📲
-Ознакомится со всеми автомобилями можно в профиле</div>
+      <div class="car-desc">Mercedes E200 в чёрном цвете — та же надёжная платформа E-класса в более строгом и статусном исполнении. Чёрный автомобиль смотрится выразительнее на горном фоне и у вечернего моря.
+
+Подходит для торжественных выездов, вечерних поездок на ужин, встреч в аэропорту. Если нужна машина, которая выглядит представительно без лишних слов — это именно такой вариант.
+
+Аренда от 2 суток. Залог 15 000 ₽.</div>
       <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20Аренда%20автомобиля%20Mercedes-Benz%20E200%20black" class="btn btn-gold btn-lg" target="_blank" rel="noopener" style="margin-top:8px">
         Забронировать — ответим за 10 минут
       </a>

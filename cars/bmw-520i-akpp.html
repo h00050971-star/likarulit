@@ -80,12 +80,12 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .breadcrumb span{color:#444}
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
-.gallery{position:sticky;top:96px}
+.gallery{position:sticky;top:96px;overflow:hidden}
 .main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;background:#1a1a1a;
   display:block;cursor:zoom-in;transition:opacity .3s}
-.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;overflow:hidden;border-radius:10px}
 .thumb{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center;
-  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent}
+  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent;display:block}
 .thumb.active,.thumb:hover{opacity:1;transform:scale(1.04);border-color:var(--gold)}
 .car-info{}
 .cat-badge{display:inline-block;padding:5px 14px;border-radius:100px;border:1px solid var(--gold);
@@ -207,27 +207,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <section style="padding:clamp(40px,5vw,72px) 0;background:var(--dark)">
     <div class="wrap">
       <h2 style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:20px;color:#ccc">Об автомобиле</h2>
-      <div class="car-desc">APЕHДА АВТО В СОЧИ — ПPОKАТ АВTO БEЗ ПОСPEДHИKOВ
-ВМW 520i AКПП 2.0 Stеptroniс нa 184 л.c.
-✅ Koмфoртный и быcтрый автoмoбиль для вaшегo oтдыxа
-✅ Bceгдa чиcтый caлон + пoлный бaк
-✅ Детcкое крecло и зapядки — БЕCПЛATHO
-📞Звoните или Напишите «Aвто» и нужныe даты — отвeчу зa 10 минут.
-📅 ЦЕHЫ (oт 2 суток):
-2-4 суток — 4500 ₽/сутки (250км в сутки)
-5-9 суток — 3500 ₽/сутки (250км в сутки)
-от 30 суток — 2500 ₽/сутки (100км в сутки по Сочи)
-Не допускается использование в такси
-💰 ЗАЛОГ: 10 000 ₽ — возвращается в день сдачи авто
-📍 НАШИ ОФИСЫ (выдача и возврат):
-Сочи  Аэропорт Адлер  Красная Поляна
-🗺️ ТЕРРИТОРИЯ:
-Езда по Большому Сочи (от Магри до Абхазии). Выезд в Абхазию — обсуждаем.
-ДОКУМЕНТЫ: Паспорт + права (стаж от 2 лет)
-💳 ОПЛАТА: Наличные / Карта / Безнал для юрлиц
-🚀 КАК ЗАБРОНИРОВАТЬ?
-📞Звоните или Напишите «Авто» и нужные даты — отвечу за 10 минут.
-️ Добавьте в избранное, чтобы не потерять</div>
+      <div class="car-desc">BMW 520i с восьмиступенчатым автоматом ZF — тот же 184-сильный мотор и немецкая надёжность, но коробка переключается незаметно и быстро. Один из наиболее популярных вариантов пятёрки среди арендаторов.
+
+Подходит тем, кто много ездит в городе и не хочет думать о переключениях. Комфортная машина для отдыха — без спортивной напряжённости, но с нужной долей динамики на трассе.
+
+Аренда от 2 суток. Залог 15 000 ₽.</div>
       <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20Аренда%20авто,%20Прокат%20авто%20BMW%20520i%20АКПП" class="btn btn-gold btn-lg" target="_blank" rel="noopener" style="margin-top:8px">
         Забронировать — ответим за 10 минут
       </a>

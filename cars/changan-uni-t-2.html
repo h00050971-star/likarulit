@@ -80,12 +80,12 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .breadcrumb span{color:#444}
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
-.gallery{position:sticky;top:96px}
+.gallery{position:sticky;top:96px;overflow:hidden}
 .main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;background:#1a1a1a;
   display:block;cursor:zoom-in;transition:opacity .3s}
-.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;overflow:hidden;border-radius:10px}
 .thumb{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center;
-  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent}
+  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent;display:block}
 .thumb.active,.thumb:hover{opacity:1;transform:scale(1.04);border-color:var(--gold)}
 .car-info{}
 .cat-badge{display:inline-block;padding:5px 14px;border-radius:100px;border:1px solid var(--gold);
@@ -207,27 +207,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <section style="padding:clamp(40px,5vw,72px) 0;background:var(--dark)">
     <div class="wrap">
       <h2 style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:20px;color:#ccc">Об автомобиле</h2>
-      <div class="car-desc">АPЕНДA АВТО В СОЧИ — ПPОKАТ АВTО БEЗ ПОCPEДHИKOВ
-Арeндa автo, Пpoкaт автo Changаn UNI-Z с панopамным люком
-✅ Кoмфopтный и быстpый aвтомoбиль для вашeгo отдыхa
-✅ Вcегда чистый caлон + пoлный бaк
-✅ Детcкoe кpecло и зарядки — БEСПЛATНО
-📞Звoнитe или Нaпишитe «Авто» и нужные даты — отвечу за 10 минут.
-📅 ЦЕНЫ (от 2 суток):
-2-4 суток — 4100₽/сутки (250км в сутки)
-5-9 суток — 3100 ₽/сутки (250км в сутки)
-от 10 суток — 2100 ₽/сутки (100км в сутки по Сочи)
-Не допускается использование в такси
-💰 ЗАЛОГ: 10 000 ₽ — возвращается в день сдачи авто
-📍 НАШИ ОФИСЫ (выдача и возврат):
-Сочи  Аэропорт Адлер  Красная Поляна
-🗺️ ТЕРРИТОРИЯ:
-Езда по Большому Сочи (от Магри до Абхазии). Выезд в Абхазию — обсуждаем.
-ДОКУМЕНТЫ: Паспорт + права (стаж от 2 лет)
-💳 ОПЛАТА: Наличные / Карта / Безнал для юрлиц
-🚀 КАК ЗАБРОНИРОВАТЬ?
-📞Звоните или Напишите «Авто» и нужные даты — отвечу за 10 минут.
-️ Добавьте в избранное, чтобы не потерять</div>
+      <div class="car-desc">Changan UNI-T — второй экземпляр в парке. Та же комплектация: 147 л.с., АКПП, полный набор ассистентов водителя. Если основной UNI-T занят — этот автомобиль всегда в наличии.
+
+Подходит для деловых поездок, семейных выездов и экономных маршрутов по региону. Невысокий расход топлива, вместительный багажник, комфортный второй ряд.
+
+Аренда от 2 суток. Залог 10 000 ₽.</div>
       <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20Аренда%20авто,%20Прокат%20авто%20Сhangan%20UNI-T" class="btn btn-gold btn-lg" target="_blank" rel="noopener" style="margin-top:8px">
         Забронировать — ответим за 10 минут
       </a>

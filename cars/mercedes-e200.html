@@ -80,12 +80,12 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .breadcrumb span{color:#444}
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
-.gallery{position:sticky;top:96px}
+.gallery{position:sticky;top:96px;overflow:hidden}
 .main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;background:#1a1a1a;
   display:block;cursor:zoom-in;transition:opacity .3s}
-.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;overflow:hidden;border-radius:10px}
 .thumb{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center;
-  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent}
+  cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent;display:block}
 .thumb.active,.thumb:hover{opacity:1;transform:scale(1.04);border-color:var(--gold)}
 .car-info{}
 .cat-badge{display:inline-block;padding:5px 14px;border-radius:100px;border:1px solid var(--gold);
@@ -206,21 +206,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <section style="padding:clamp(40px,5vw,72px) 0;background:var(--dark)">
     <div class="wrap">
       <h2 style="font-family:var(--font-display);font-size:22px;font-weight:600;margin-bottom:20px;color:#ccc">Об автомобиле</h2>
-      <div class="car-desc">🌴Пpoкaт SоchiSyndiсate приветствует вaс в нaшем прекрасном гоpoдe!🌴
-🌍Пpeдлaгаем в аренду/пpокат Merсedes E200/ W213/ 2018/ 9G АКПП  2,0 литра  Бензин  2WD 🌏
-🏖️Kомфоpтный и экoнoмичный ceдан бизнec клаcсa.🏖️
-🎫Оcновнoй тариф:от 2-уx cуток 4.500 в cутки (250км в cутки)Залoг 10.000🎫
-🪪Apeнда по двум документaм паcпоpт и водитeльcкое удоcтоверение.🪪
-🏞️Возможен выезд в Абхазию, обсуждается индивидуально.🏞️
-💥Детские кресла и зарядки для телефонов предоставляются бесплатно💥
-👶Детское кресло предоставляется по просьбе за ранее.👶
-💧Всегда чистый авто и полный бак.💧
-🗺️ ПОДАЧА В СОЧИ / АДЛЕР / КРАСНУЮ ПОЛЯНУ / ДАГОМЫС / ЛОО / ЛАЗАРЕВСКОЕ / РОЗА ХУТОР.🗺️
-🗾Езда по территории большого Сочи, от Магри до границы с Абхазией (Красная поляна входит в эту территорию) Выезд за пределы оговаривается и оплачивается индивидуально.🗾
-💯Возврат залога без задержек💯Индивидуальный подход к каждому клиенту💯Быстрая подача автомобиля💯
-СПОСОБЫ ОПЛАТЫ:Наличными или переводом💳 Возможна оплата банковской картой. Работаем с юридическими лицами, возможность безналичного расчета
-📲Для того чтобы узнать свободны ли интересующие вас даты, ПИШИТЕ прямо сейчас.📲
-Ознакомится со всеми автомобилями можно в профиле</div>
+      <div class="car-desc">Mercedes E200 — немецкий бизнес-седан с мягкой подвеской, тихим салоном и продуманной эргономикой. Двухлитровый турбомотор 197 л.с., девятиступенчатый автомат, большой экран мультимедиа. Ощущение автомобиля выше своего класса.
+
+Хорошо подходит для деловых поездок, трансферов и статусных выездов. Удобен для длительных переездов — подвеска работает незаметно, шумоизоляция на уровне. В салоне можно вести переговоры по телефону без лишнего фона.
+
+Аренда от 2 суток. Залог 15 000 ₽.</div>
       <a href="https://wa.me/79180000000?text=Хочу%20арендовать%20Аренда%20автомобиля%20Mercedes%20E200" class="btn btn-gold btn-lg" target="_blank" rel="noopener" style="margin-top:8px">
         Забронировать — ответим за 10 минут
       </a>
