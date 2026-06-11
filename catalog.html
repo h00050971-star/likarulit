@@ -86,8 +86,8 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 @media(max-width:600px){.cars-grid{grid-template-columns:1fr}}
 .car-card{background:#161616;border-radius:18px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .car-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.5)}
-.car-vis{height:200px;background-size:contain;background-position:center;background-color:#141414;background-repeat:no-repeat;position:relative}
-.car-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.65))}
+.car-vis{height:200px;background-size:cover;background-position:center bottom;position:relative}
+.car-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.65))}
 .car-badge{position:absolute;top:12px;left:12px;z-index:1;padding:4px 10px;border-radius:100px;
   background:rgba(0,0,0,.5);backdrop-filter:blur(8px);font-size:11px;color:#ccc;font-weight:500}
 .car-body{padding:18px}
