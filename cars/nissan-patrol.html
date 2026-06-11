@@ -81,8 +81,15 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
 .gallery{position:sticky;top:96px;overflow:hidden}
-.main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;background:#1a1a1a;
+.main-photo{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 30%;border-radius:18px;background:#1a1a1a;
   display:block;cursor:zoom-in;transition:opacity .3s}
+.photo-wrap{position:relative;border-radius:18px;overflow:hidden}
+.photo-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;
+  border-radius:50%;background:rgba(0,0,0,.55);border:none;color:#fff;font-size:26px;
+  cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .25s var(--ease);line-height:1;padding:0}
+.photo-nav:hover{background:rgba(200,150,12,.85);transform:translateY(-50%) scale(1.08)}
+.photo-prev{left:12px}.photo-next{right:12px}
 .thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px;overflow:hidden;border-radius:10px}
 .thumb{aspect-ratio:1;border-radius:10px;background-size:cover;background-position:center;
   cursor:pointer;opacity:.55;transition:opacity .25s,transform .25s;border:2px solid transparent;display:block}
@@ -117,7 +124,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 @media(max-width:600px){.cars-grid{grid-template-columns:1fr}}
 .car-card{background:#161616;border-radius:18px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .car-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.5)}
-.car-vis{height:180px;background-size:cover;background-position:center;position:relative}
+.car-vis{height:180px;background-size:cover;background-position:center 30%;position:relative}
 .car-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.7))}
 .car-badge{position:absolute;top:12px;left:12px;z-index:1;padding:4px 10px;border-radius:100px;
   background:rgba(0,0,0,.5);backdrop-filter:blur(8px);font-size:11px;color:#ccc;font-weight:500}
@@ -159,18 +166,22 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
       </div>
       <div class="car-layout">
         <div class="gallery">
-          <img class="main-photo" id="mainPhoto" src="../photos/nissan-patrol/photo_01.jpg" alt="Аренда Аренда автомобиля Nissan Patrol в Сочи" loading="eager">
+          <div class="photo-wrap">
+            <img class="main-photo" id="mainPhoto" src="../photos/nissan-patrol/photo_01.jpg" alt="Аренда Аренда автомобиля Nissan Patrol в Сочи" loading="eager">
+            <button class="photo-nav photo-prev" onclick="navPhoto(-1)" aria-label="Назад">&#8249;</button>
+            <button class="photo-nav photo-next" onclick="navPhoto(1)" aria-label="Вперёд">&#8250;</button>
+          </div>
           <div class="thumbs">
-<div class="thumb active" onclick="setPhoto(this,'../photos/nissan-patrol/photo_01.jpg')" style="background-image:url('../photos/nissan-patrol/photo_01.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_02.jpg')" style="background-image:url('../photos/nissan-patrol/photo_02.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_03.jpg')" style="background-image:url('../photos/nissan-patrol/photo_03.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_04.jpg')" style="background-image:url('../photos/nissan-patrol/photo_04.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_05.jpg')" style="background-image:url('../photos/nissan-patrol/photo_05.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_06.jpg')" style="background-image:url('../photos/nissan-patrol/photo_06.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_07.jpg')" style="background-image:url('../photos/nissan-patrol/photo_07.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_08.jpg')" style="background-image:url('../photos/nissan-patrol/photo_08.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_09.jpg')" style="background-image:url('../photos/nissan-patrol/photo_09.jpg')"></div>
-<div class="thumb " onclick="setPhoto(this,'../photos/nissan-patrol/photo_10.jpg')" style="background-image:url('../photos/nissan-patrol/photo_10.jpg')"></div>
+<div class="thumb active" data-src="../photos/nissan-patrol/photo_01.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_01.jpg')" style="background-image:url('../photos/nissan-patrol/photo_01.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_02.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_02.jpg')" style="background-image:url('../photos/nissan-patrol/photo_02.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_03.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_03.jpg')" style="background-image:url('../photos/nissan-patrol/photo_03.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_04.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_04.jpg')" style="background-image:url('../photos/nissan-patrol/photo_04.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_05.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_05.jpg')" style="background-image:url('../photos/nissan-patrol/photo_05.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_06.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_06.jpg')" style="background-image:url('../photos/nissan-patrol/photo_06.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_07.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_07.jpg')" style="background-image:url('../photos/nissan-patrol/photo_07.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_08.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_08.jpg')" style="background-image:url('../photos/nissan-patrol/photo_08.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_09.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_09.jpg')" style="background-image:url('../photos/nissan-patrol/photo_09.jpg')"></div>
+<div class="thumb " data-src="../photos/nissan-patrol/photo_10.jpg" onclick="setPhoto(this,'../photos/nissan-patrol/photo_10.jpg')" style="background-image:url('../photos/nissan-patrol/photo_10.jpg')"></div>
           </div>
         </div>
         <div class="car-info">
@@ -254,10 +265,19 @@ window.addEventListener('scroll',()=>{
 });
 </script>
 <script>
+var _thumbs, _idx = 0;
 function setPhoto(thumb, src) {
   document.getElementById('mainPhoto').src = src;
-  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  _thumbs = _thumbs || document.querySelectorAll('.thumb');
+  _thumbs.forEach((t, i) => { t.classList.remove('active'); if (t === thumb) _idx = i; });
   thumb.classList.add('active');
+  thumb.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+function navPhoto(dir) {
+  _thumbs = _thumbs || document.querySelectorAll('.thumb');
+  _idx = (_idx + dir + _thumbs.length) % _thumbs.length;
+  var t = _thumbs[_idx];
+  setPhoto(t, t.dataset.src);
 }
 </script>
 </body>
