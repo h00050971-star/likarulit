@@ -151,43 +151,32 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .hero-scroll .line{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:scrolldn 2s var(--ease) infinite;}
 @keyframes scrolldn{0%{transform:scaleY(0);transform-origin:top}40%{transform:scaleY(1);transform-origin:top}60%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* ---- BASE: mobile-first flex stack ---- */
+/* ---- BASE: mobile stack ---- */
 .hero-inner{display:flex;flex-direction:column;}
 .hero-right{order:-1;margin-bottom:28px;}
-.hero-left{}
 
 /* ---- DESKTOP hero (≥981px) ---- */
 @media(min-width:981px){
   .hero{
     padding-bottom:110px;
     background:
-      linear-gradient(rgba(6,6,14,.78),rgba(6,6,14,.78)),
+      linear-gradient(to right, rgba(4,4,12,.88) 40%, rgba(4,4,12,.45) 70%, rgba(4,4,12,.15) 100%),
       url('photos/hero-bg.webp') center/cover no-repeat;
   }
   .hero::after{display:none;}
   .hero-grid-lines{display:none;}
   .wrap.hero-inner{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
+    display:block;
     max-width:1280px;
     margin:0 auto;
     padding-bottom:0;
   }
-  .hero-right{order:0;display:flex;justify-content:center;align-items:center;margin-bottom:0;}
-  .hero h1{font-size:clamp(34px,3.2vw,52px);max-width:none;}
-  .hero-sub{font-size:18px;max-width:none;}
-  .hero-author{
-    flex-direction:column;align-items:center;text-align:center;gap:20px;
-    padding:36px 32px;background:rgba(255,255,255,.05);
-    border-radius:24px;border:1px solid rgba(255,255,255,.09);
-  }
-  .hero-ava-ring{width:150px;height:150px;padding:4px;}
-  .hero-author-text{text-align:center;}
-  .hero-author-text b{font-size:19px;}
-  .hero-author-text span{font-size:13px;}
-  .hero-site-label{margin-bottom:20px;}
+  .hero-right{display:none;}
+  .hero-left{max-width:580px;}
+  .hero h1{font-size:clamp(38px,3.8vw,62px);max-width:none;line-height:1.1;}
+  .hero-sub{font-size:19px;max-width:48ch;}
+  .hero-author{margin-bottom:32px;}
+  .hero-site-label{margin-bottom:16px;}
 }
 
 /* ---- MOBILE hero (≤980px) ---- */
