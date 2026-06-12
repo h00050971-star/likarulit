@@ -122,9 +122,8 @@ html.anim .reveal.in{opacity:1;transform:none;}
   min-height:100vh;display:flex;flex-direction:column;justify-content:center;
   padding-top:78px;overflow:hidden;
   background:
-    radial-gradient(120% 80% at 50% 115%, rgba(200,150,12,.30) 0%, rgba(200,150,12,0) 55%),
-    radial-gradient(90% 70% at 80% 0%, rgba(40,70,130,.45) 0%, rgba(40,70,130,0) 60%),
-    linear-gradient(160deg,#0a1628 0%,#0b0f1a 38%,#0a0a0c 70%,#070707 100%);
+    linear-gradient(to bottom, rgba(4,4,12,.93) 0%, rgba(4,4,12,.83) 42%, rgba(4,4,12,.58) 70%, rgba(4,4,12,.38) 100%),
+    url('photos/hero-mob.jpg') center bottom/cover no-repeat;
 }
 .hero::after{
   content:"";position:absolute;inset:0;pointer-events:none;
@@ -186,7 +185,7 @@ html.anim .reveal.in{opacity:1;transform:none;}
   .hero-grid-lines{display:none;}
   .wrap.hero-inner{
     display:grid;
-    grid-template-columns:380px 1fr;
+    grid-template-columns:440px 1fr;
     align-items:stretch;
     gap:48px;
     max-width:1280px;
@@ -213,7 +212,7 @@ html.anim .reveal.in{opacity:1;transform:none;}
     gap:0;
     text-align:center;
   }
-  .hero-ava-ring{width:128px;height:128px;}
+  .hero-ava-ring{width:156px;height:156px;}
   .pc-info{align-items:center;}
   .pc-name{font-size:16px;}
   .pc-sub{font-size:13px;}
