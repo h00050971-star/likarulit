@@ -137,7 +137,7 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .hero h1 .hl{color:var(--gold-soft);position:relative;}
 .hero-sub{font-size:clamp(17px,2vw,22px);font-weight:300;color:#d6d6d6;margin-top:26px;max-width:34ch;line-height:1.45;}
 .hero-sub b{color:#fff;font-weight:600;}
-.hero-cta{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;}
+.hero-cta{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;align-items:center;}
 .hero-stats{
   position:absolute;left:0;right:0;bottom:34px;z-index:2;
 }
@@ -156,27 +156,49 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .hero-right{order:-1;margin-bottom:28px;}
 
 /* ---- DESKTOP hero (≥981px) ---- */
+/* ---- highlights CSS (global, used in hero) ---- */
+.hero-highlights{display:none;gap:16px;flex-wrap:wrap;margin-top:20px;}
+.hh-item{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:#fff;flex:0 0 auto;}
+.hh-ring{
+  width:72px;height:72px;border-radius:50%;padding:3px;
+  background:linear-gradient(135deg,#f9c300,#f56040,#df3078,#813ac5,#37aae0);
+  flex-shrink:0;
+}
+.hh-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2.5px solid #0D0D0D;display:block;}
+.hh-item span{font-size:11px;font-weight:600;letter-spacing:.04em;text-align:center;opacity:.9;max-width:72px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
 @media(min-width:981px){
   .hero{
     padding-bottom:110px;
     background:
-      linear-gradient(to right, rgba(4,4,12,.88) 40%, rgba(4,4,12,.45) 70%, rgba(4,4,12,.15) 100%),
+      linear-gradient(to right, rgba(4,4,12,.55) 38%, rgba(4,4,12,.35) 65%, rgba(4,4,12,.10) 100%),
       url('photos/hero-bg.webp') center/cover no-repeat;
   }
   .hero::after{display:none;}
   .hero-grid-lines{display:none;}
   .wrap.hero-inner{
-    display:block;
+    display:grid;
+    grid-template-columns:1fr 340px;
+    align-items:center;
+    gap:48px;
     max-width:1280px;
     margin:0 auto;
     padding-bottom:0;
   }
-  .hero-right{display:none;}
-  .hero-left{max-width:580px;}
-  .hero h1{font-size:clamp(38px,3.8vw,62px);max-width:none;line-height:1.1;}
+  .hero-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    order:1;
+  }
+  .hero-left{max-width:600px;}
+  .hero h1{font-size:clamp(36px,3.6vw,60px);max-width:none;line-height:1.1;}
   .hero-sub{font-size:19px;max-width:48ch;}
-  .hero-author{margin-bottom:32px;}
+  .hero-author{margin-bottom:0;}
   .hero-site-label{margin-bottom:16px;}
+  .hero-highlights{display:flex;gap:12px;}
+  .hh-ring{width:80px;height:80px;}
+  .hh-item span{font-size:12px;max-width:80px;}
 }
 
 /* ---- MOBILE hero (≤980px) ---- */
@@ -461,11 +483,11 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   <div class="wrap hero-inner">
     <div class="hero-left">
       <p class="hero-site-label reveal">Сайт автопроката Лики Самарцевой</p>
-      <h1 class="reveal d1">Сочи — это <span class="hl">600 км дорог</span>, горы и Абхазия</h1>
-      <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от 4 500 ₽/сутки</b>. Подача за час · На день и долгосрок</p>
+      <h1 class="reveal d1">Сочи — это <span class="hl">600&nbsp;км дорог</span>,<br>горы и&nbsp;Абхазия</h1>
+      <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от&nbsp;4&nbsp;500&nbsp;₽/сутки</b>. Подача за час · На день и&nbsp;долгосрок</p>
       <div class="hero-cta reveal d3">
         <a href="#catalog" class="btn btn-gold btn-lg">Выбрать машину</a>
-        <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-lg" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-md" target="_blank" rel="noopener">Написать в WhatsApp</a>
       </div>
     </div>
     <div class="hero-right">
@@ -478,6 +500,32 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <span>автоблогер из Сочи · 15 лет с тачками<br>сервис · автотюнинг · прокат · пригон</span>
         </div>
       </a>
+      <div class="hero-highlights reveal d2">
+        <a href="cars/ford-mustang.html" class="hh-item">
+          <div class="hh-ring"><img src="photos/ford-mustang/photo_01.jpg" alt="Mustang" class="hh-img"></div>
+          <span>Mustang</span>
+        </a>
+        <a href="cars/chevrolet-camaro.html" class="hh-item">
+          <div class="hh-ring"><img src="photos/chevrolet-camaro/photo_01.jpg" alt="Camaro" class="hh-img"></div>
+          <span>Camaro</span>
+        </a>
+        <a href="cars/bmw-x5-g05.html" class="hh-item">
+          <div class="hh-ring"><img src="photos/bmw-x5-g05/photo_01.jpg" alt="BMW X5" class="hh-img"></div>
+          <span>BMW X5</span>
+        </a>
+        <a href="cars/bmw-230-kabriolet.html" class="hh-item">
+          <div class="hh-ring"><img src="photos/bmw-230-kabriolet/photo_01.jpg" alt="Кабриолет" class="hh-img"></div>
+          <span>Кабриолет</span>
+        </a>
+        <a href="cars/audi-tt.html" class="hh-item">
+          <div class="hh-ring"><img src="photos/audi-tt/photo_01.jpg" alt="Audi TT" class="hh-img"></div>
+          <span>Audi TT</span>
+        </a>
+        <a href="cars/bmw-5-g30-m-sport-lci.html" class="hh-item">
+          <div class="hh-ring"><img src="photos/bmw-5-g30-m-sport-lci/photo_01.jpg" alt="BMW 5" class="hh-img"></div>
+          <span>BMW 5</span>
+        </a>
+      </div>
     </div>
   </div>
   <div class="hero-stats reveal d3">
@@ -954,6 +1002,8 @@ pills.forEach(p=>p.addEventListener('click',()=>{
     c.style.display=show?'':'none';
   });
 }));
+// clean /index.html from URL
+if(location.pathname==='/index.html')history.replaceState(null,'','/');
 </script>
 </body>
 </html>
