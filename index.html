@@ -113,9 +113,9 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .pc-info{display:flex;flex-direction:column;gap:4px;}
 .pc-name{display:block;font-size:15px;font-weight:700;color:#fff;line-height:1.3;}
 .pc-sep{opacity:.3;font-weight:300;margin:0 5px;}
-.pc-tagline{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:.9;margin-top:1px;}
+.pc-tagline{display:none;}
 .pc-sub{font-size:12px;color:#9ab;line-height:1.5;}
-.pc-fleet-label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#666;width:100%;text-align:center;}
+.pc-fleet-label{display:none;}
 
 /* ---------- HERO ---------- */
 .hero{
@@ -217,13 +217,21 @@ html.anim .reveal.in{opacity:1;transform:none;}
   .pc-info{align-items:center;}
   .pc-name{font-size:16px;}
   .pc-sub{font-size:13px;}
+  .pc-tagline{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:.9;margin-top:2px;}
+  .pc-fleet-label{display:block;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#666;width:100%;text-align:center;}
   .hero-highlights{display:flex;}
   .hh-ring{width:52px;height:52px;}
 }
 
 /* ---- MOBILE hero (≤980px) ---- */
 @media(max-width:980px){
-  .hero{padding-bottom:0;}
+  .hero{
+    padding-bottom:0;
+    background:
+      linear-gradient(to bottom, rgba(4,4,12,.93) 0%, rgba(4,4,12,.82) 40%, rgba(4,4,12,.60) 68%, rgba(4,4,12,.40) 100%),
+      url('photos/hero-mob.jpg') center bottom/cover no-repeat;
+  }
+  .hero::after{display:none;}
   .hero-stats{position:static;margin-top:20px;}
   .hero-scroll{display:none;}
 }
