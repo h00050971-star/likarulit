@@ -290,7 +290,8 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .cmp-body .cmp-row:hover{background:rgba(255,255,255,.03);}
 .cmp-car-col{display:flex;flex-direction:column;gap:4px;}
 .cmp-car-name{font-weight:600;color:#fff;font-size:16px;}
-.cmp-rival{font-size:11px;color:#555;letter-spacing:.02em;}
+.cmp-rival{font-size:13px;color:#666;letter-spacing:.01em;text-decoration:line-through;text-decoration-color:#555;}
+.cmp-head-sub{font-size:11px;color:#555;letter-spacing:.04em;text-transform:uppercase;font-weight:400;margin-top:2px;}
 .cmp-new{color:var(--gold-soft);font-weight:700;font-size:clamp(16px,2.4vw,20px);font-family:var(--font-display);}
 .cmp-note{text-align:center;font-size:13px;color:#777;margin-top:22px;}
 
@@ -661,11 +662,11 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
     <div class="sec-head reveal" style="text-align:center;">
       <span class="eyebrow" style="justify-content:center">Цена как аргумент</span>
       <h2 class="sec-title">Почему берут&nbsp;у нас?</h2>
-      <p class="cmp-subtitle">Сравниваем цены&nbsp;с другими автопрокатами Сочи</p>
+      <p class="cmp-subtitle">Сравниваем цены&nbsp;с другими автопрокатами&nbsp;Сочи</p>
     </div>
     <div class="cmp reveal d1">
       <div class="cmp-row cmp-head">
-        <div class="cmp-cell">Машина</div>
+        <div class="cmp-cell"><div class="cmp-car-col"><span>Машина</span><span class="cmp-head-sub">цены конкурентов</span></div></div>
         <div class="cmp-cell gold">Наша цена</div>
       </div>
       <div class="cmp-body">
