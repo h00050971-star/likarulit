@@ -37,6 +37,10 @@ a{text-decoration:none;color:inherit}
 .hdr-right{display:flex;align-items:center;gap:14px}
 .hdr-phone{font-size:14px;font-weight:500}
 .hdr-phone span{display:block;font-size:11px;color:#AAA;font-weight:400}
+.hdr-back{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#aaa;font-size:19px;text-decoration:none;margin-right:6px;flex-shrink:0;
+  border:1.5px solid rgba(255,255,255,.15);transition:all .2s}
+.hdr-back:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}
 @media(max-width:600px){.hdr-phone{display:none}}
 .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:100px;font-family:var(--font-display);
   font-weight:600;cursor:pointer;border:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
@@ -143,7 +147,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .cars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media(max-width:880px){.cars-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.cars-grid{grid-template-columns:1fr}}
-.car-card{background:#161616;border-radius:18px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.car-card{background:#161616;border-radius:18px;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease);text-decoration:none;color:inherit;display:block}
 .car-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.5)}
 .car-vis{height:180px;background-size:cover;background-position:center bottom;position:relative}
 .car-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.65))}
@@ -165,7 +169,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 <body>
 <header class="hdr" id="top">
   <div class="wrap hdr-inner">
-    <a href="../index.html" class="logo">
+    <a href="../catalog.html" class="hdr-back" aria-label="Назад">&#8592;</a><a href="../index.html" class="logo">
       <div class="logo-ava-ring"><img src="../photos/lika.jpg" alt="Лика" class="logo-ava-img"></div>
       <div class="logo-texts">
         <span class="logo-name">Лика <span>Рулит</span></span>
@@ -182,20 +186,12 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <section class="car-hero">
     <div class="wrap">
       <div class="breadcrumb">
-        <a href="../catalog.html" class="back-btn" aria-label="Назад в каталог">&#8592;</a>
         <a href="../index.html">Главная</a>
         <span>›</span>
         <a href="../catalog.html">Каталог</a>
         <span>›</span>
         <span style="color:#fff">BMW 430i 2.0 Gran Coupe</span>
       </div>
-      <a class="lika-strip" href="../index.html#lika">
-        <div class="ls-ava-ring"><img src="../photos/lika.jpg" alt="Лика" class="ls-ava-img"></div>
-        <div>
-          <span class="ls-name">Лика Самарцева</span>
-          <span class="ls-sub">15 лет с тачками в Сочи · сервис · прокат · пригон</span>
-        </div>
-      </a>
       <div class="car-layout">
         <div class="gallery">
           <div class="photo-wrap">

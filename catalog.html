@@ -35,6 +35,10 @@ a{text-decoration:none;color:inherit}
 .hdr-right{display:flex;align-items:center;gap:14px}
 .hdr-phone{font-size:14px;font-weight:500}
 .hdr-phone span{display:block;font-size:11px;color:#AAA;font-weight:400}
+.hdr-back{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#aaa;font-size:19px;text-decoration:none;margin-right:6px;flex-shrink:0;
+  border:1.5px solid rgba(255,255,255,.15);transition:all .2s}
+.hdr-back:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4)}
 @media(max-width:600px){.hdr-phone{display:none}}
 .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:100px;font-family:var(--font-display);
   font-weight:600;cursor:pointer;border:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s}
@@ -152,7 +156,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
         <a href="https://wa.me/79180000000">Написать в WhatsApp →</a>
       </div>
       <div class="cars-grid" id="carsGrid">
-<article class="car-card" data-cat="cabriolet">
+<a class="car-card" href="cars/audi-tt.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/audi-tt/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -160,11 +164,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Audi TT</div>
     <div class="car-foot">
       <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/audi-tt.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/audi-tt-fv.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/audi-tt-fv/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -172,11 +176,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Audi TT FV</div>
     <div class="car-foot">
       <div class="car-price"><b>от 10 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/audi-tt-fv.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/bmw-230-kabriolet.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/bmw-230-kabriolet/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -184,11 +188,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 230 Кабриолет</div>
     <div class="car-foot">
       <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-230-kabriolet.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/bmw-4-gran-coupe.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/bmw-4-gran-coupe/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -196,11 +200,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 4 Gran Coupe</div>
     <div class="car-foot">
       <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-4-gran-coupe.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/bmw-430i-2-0-gran-coupe.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/bmw-430i-2-0-gran-coupe/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -208,11 +212,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 430i 2.0 Gran Coupe</div>
     <div class="car-foot">
       <div class="car-price"><b>от 10 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-430i-2-0-gran-coupe.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/bmw-430i-f33.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/bmw-430i-f33/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -220,11 +224,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 430i F33</div>
     <div class="car-foot">
       <div class="car-price"><b>от 12 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-430i-f33.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-5-g30-2-0.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-5-g30-2-0/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -232,11 +236,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 5 G30 2.0</div>
     <div class="car-foot">
       <div class="car-price"><b>от 7 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-5-g30-2-0.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-5-g30-m-sport-lci.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-5-g30-m-sport-lci/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -244,11 +248,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 5 G30 M Sport LCI</div>
     <div class="car-foot">
       <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-5-g30-m-sport-lci.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-520d-g30-m-sport.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-520d-g30-m-sport/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -256,11 +260,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 520D G30 M sport</div>
     <div class="car-foot">
       <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-520d-g30-m-sport.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-520i.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-520i/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -268,11 +272,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 520i</div>
     <div class="car-foot">
       <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-520i.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-520i-akpp.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-520i-akpp/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -280,11 +284,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 520i АКПП</div>
     <div class="car-foot">
       <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-520i-akpp.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-7-740li.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-7-740li/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -292,11 +296,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 7 740Li</div>
     <div class="car-foot">
       <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-7-740li.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-7-750li.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-7-750li/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -304,11 +308,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW 7 750Li</div>
     <div class="car-foot">
       <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-7-750li.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-m5-sport.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-m5-sport/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -316,11 +320,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW M5 Sport</div>
     <div class="car-foot">
       <div class="car-price"><b>от 12 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-m5-sport.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/bmw-m5-sport-4wd.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/bmw-m5-sport-4wd/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -328,11 +332,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW M5 Sport 4WD</div>
     <div class="car-foot">
       <div class="car-price"><b>от 13 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-m5-sport-4wd.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/bmw-x5-4-0-xdrive.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/bmw-x5-4-0-xdrive/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -340,11 +344,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW X5 4.0 xDrive</div>
     <div class="car-foot">
       <div class="car-price"><b>от 17 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-x5-4-0-xdrive.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/bmw-x5-g05.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/bmw-x5-g05/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -352,11 +356,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат BMW X5 G05</div>
     <div class="car-foot">
       <div class="car-price"><b>от 16 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/bmw-x5-g05.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/changan-lamore.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/changan-lamore/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -364,11 +368,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Changan Lamore</div>
     <div class="car-foot">
       <div class="car-price"><b>от 5 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/changan-lamore.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/changan-uni-t.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/changan-uni-t/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -376,11 +380,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Changan UNI-T</div>
     <div class="car-foot">
       <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/changan-uni-t.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/changan-uni-t-2.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/changan-uni-t-2/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -388,11 +392,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Changan UNI-T 2</div>
     <div class="car-foot">
       <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/changan-uni-t-2.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/changan-uni-v.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/changan-uni-v/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -400,11 +404,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Changan UNI-V</div>
     <div class="car-foot">
       <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/changan-uni-v.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/chery-arrizo-8.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/chery-arrizo-8/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -412,11 +416,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chery Arrizo 8</div>
     <div class="car-foot">
       <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chery-arrizo-8.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/chery-arrizo-8-pro.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/chery-arrizo-8-pro/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -424,11 +428,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chery Arrizo 8 Pro</div>
     <div class="car-foot">
       <div class="car-price"><b>от 5 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chery-arrizo-8-pro.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/chery-tiggo-7-pro-max.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/chery-tiggo-7-pro-max/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -436,11 +440,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chery Tiggo 7 pro max</div>
     <div class="car-foot">
       <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chery-tiggo-7-pro-max.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="family">
+</a>
+<a class="car-card" href="cars/chery-tiggo-8-pro-e.html" data-cat="family">
   <div class="car-vis" style="background-image:url('photos/chery-tiggo-8-pro-e/photo_01.jpg')">
     <div class="car-badge">Семейные</div>
   </div>
@@ -448,11 +452,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chery Tiggo 8 Pro e+</div>
     <div class="car-foot">
       <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chery-tiggo-8-pro-e.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="family">
+</a>
+<a class="car-card" href="cars/chery-tiggo-8-pro-max.html" data-cat="family">
   <div class="car-vis" style="background-image:url('photos/chery-tiggo-8-pro-max/photo_01.jpg')">
     <div class="car-badge">Семейные</div>
   </div>
@@ -460,11 +464,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chery Tiggo 8 pro max</div>
     <div class="car-foot">
       <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chery-tiggo-8-pro-max.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="family">
+</a>
+<a class="car-card" href="cars/chery-tiggo-pro-plug-in-hybrid.html" data-cat="family">
   <div class="car-vis" style="background-image:url('photos/chery-tiggo-pro-plug-in-hybrid/photo_01.jpg')">
     <div class="car-badge">Семейные</div>
   </div>
@@ -472,11 +476,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chery Tiggo Pro Plug-in Hybrid</div>
     <div class="car-foot">
       <div class="car-price"><b>от 7 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chery-tiggo-pro-plug-in-hybrid.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/chevrolet-camaro.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/chevrolet-camaro/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -484,11 +488,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chevrolet Camaro</div>
     <div class="car-foot">
       <div class="car-price"><b>от 12 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chevrolet-camaro.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/chevrolet-camaro-gt-8.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/chevrolet-camaro-gt-8/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -496,11 +500,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chevrolet Camaro GT 8</div>
     <div class="car-foot">
       <div class="car-price"><b>от 14 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chevrolet-camaro-gt-8.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/chevrolet-trax.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/chevrolet-trax/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -508,11 +512,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Chevrolet Trax</div>
     <div class="car-foot">
       <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/chevrolet-trax.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/ford-kuga.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/ford-kuga/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -520,11 +524,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Ford Kuga</div>
     <div class="car-foot">
       <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/ford-kuga.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/ford-mustang.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/ford-mustang/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -532,11 +536,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Ford Mustang</div>
     <div class="car-foot">
       <div class="car-price"><b>от 13 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/ford-mustang.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="cabriolet">
+</a>
+<a class="car-card" href="cars/ford-mustang-shelby-gt.html" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/ford-mustang-shelby-gt/photo_01.jpg')">
     <div class="car-badge">Кабриолеты</div>
   </div>
@@ -544,11 +548,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Ford Mustang Shelby GT</div>
     <div class="car-foot">
       <div class="car-price"><b>от 17 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/ford-mustang-shelby-gt.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/geely-coolray.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/geely-coolray/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -556,11 +560,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Geely Coolray</div>
     <div class="car-foot">
       <div class="car-price"><b>от 6 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/geely-coolray.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/haval-jolion.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/haval-jolion/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -568,11 +572,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Haval Jolion</div>
     <div class="car-foot">
       <div class="car-price"><b>от 6 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/haval-jolion.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="family">
+</a>
+<a class="car-card" href="cars/kia-carnival.html" data-cat="family">
   <div class="car-vis" style="background-image:url('photos/kia-carnival/photo_01.jpg')">
     <div class="car-badge">Семейные</div>
   </div>
@@ -580,11 +584,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Kia Carnival</div>
     <div class="car-foot">
       <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/kia-carnival.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/lexus-es250.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/lexus-es250/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -592,11 +596,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Lexus ES250</div>
     <div class="car-foot">
       <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/lexus-es250.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/lexus-gs350.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/lexus-gs350/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -604,11 +608,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Lexus GS350</div>
     <div class="car-foot">
       <div class="car-price"><b>от 9 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/lexus-gs350.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/mercedes-e200.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/mercedes-e200/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -616,11 +620,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Mercedes E200</div>
     <div class="car-foot">
       <div class="car-price"><b>от 8 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/mercedes-e200.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/mercedes-glk220d.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/mercedes-glk220d/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -628,11 +632,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Mercedes GLK220D</div>
     <div class="car-foot">
       <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/mercedes-glk220d.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="premium">
+</a>
+<a class="car-card" href="cars/mercedes-benz-e200-black.html" data-cat="premium">
   <div class="car-vis" style="background-image:url('photos/mercedes-benz-e200-black/photo_01.jpg')">
     <div class="car-badge">BMW и премиум</div>
   </div>
@@ -640,11 +644,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Mercedes-Benz E200 black</div>
     <div class="car-foot">
       <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/mercedes-benz-e200-black.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/nissan-patrol.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/nissan-patrol/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -652,11 +656,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Nissan Patrol</div>
     <div class="car-foot">
       <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/nissan-patrol.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="family">
+</a>
+<a class="car-card" href="cars/noah-gibrid.html" data-cat="family">
   <div class="car-vis" style="background-image:url('photos/noah-gibrid/photo_01.jpg')">
     <div class="car-badge">Семейные</div>
   </div>
@@ -664,11 +668,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Noah Гибрид</div>
     <div class="car-foot">
       <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/noah-gibrid.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="crossover">
+</a>
+<a class="car-card" href="cars/toyota-camry.html" data-cat="crossover">
   <div class="car-vis" style="background-image:url('photos/toyota-camry/photo_01.jpg')">
     <div class="car-badge">Кроссоверы</div>
   </div>
@@ -676,11 +680,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Toyota Camry</div>
     <div class="car-foot">
       <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/toyota-camry.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="family">
+</a>
+<a class="car-card" href="cars/toyota-esquire.html" data-cat="family">
   <div class="car-vis" style="background-image:url('photos/toyota-esquire/photo_01.jpg')">
     <div class="car-badge">Семейные</div>
   </div>
@@ -688,11 +692,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Toyota Esquire</div>
     <div class="car-foot">
       <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/toyota-esquire.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
-<article class="car-card" data-cat="family">
+</a>
+<a class="car-card" href="cars/toyota-serena.html" data-cat="family">
   <div class="car-vis" style="background-image:url('photos/toyota-serena/photo_01.jpg')">
     <div class="car-badge">Семейные</div>
   </div>
@@ -700,10 +704,10 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
     <div class="car-name">Прокат Toyota Serena</div>
     <div class="car-foot">
       <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
-      <a href="cars/toyota-serena.html" class="btn-sm-outline">Подробнее</a>
+      <span class="btn-sm-outline">Подробнее</span>
     </div>
   </div>
-</article>
+</a>
       </div>
     </div>
   </section>

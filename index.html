@@ -113,7 +113,7 @@ html.anim .reveal.in{opacity:1;transform:none;}
 /* ---------- HERO ---------- */
 .hero{
   min-height:100vh;display:flex;flex-direction:column;justify-content:center;
-  padding-top:78px;overflow:hidden;
+  padding-top:78px;padding-bottom:110px;overflow:hidden;
   background:
     radial-gradient(120% 80% at 50% 115%, rgba(200,150,12,.30) 0%, rgba(200,150,12,0) 55%),
     radial-gradient(90% 70% at 80% 0%, rgba(40,70,130,.45) 0%, rgba(40,70,130,0) 60%),
@@ -151,6 +151,7 @@ html.anim .reveal.in{opacity:1;transform:none;}
 @keyframes scrolldn{0%{transform:scaleY(0);transform-origin:top}40%{transform:scaleY(1);transform-origin:top}60%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 @media(max-width:980px){
+  .hero{padding-bottom:0;}
   .hero-stats{position:static;margin-top:48px;}
   .hero-scroll{display:none;}
 }
@@ -204,16 +205,18 @@ html.anim .reveal.in{opacity:1;transform:none;}
 
 /* ---------- PRICE TABLE (screen 3) ---------- */
 .cmp{max-width:780px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1);}
-.cmp-row{display:grid;grid-template-columns:1.4fr 1fr;align-items:center;}
+.cmp-subtitle{font-size:15px;color:#888;margin-top:10px;text-align:center;}
+.cmp{max-width:780px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1);}
+.cmp-row{display:grid;grid-template-columns:1.4fr 1fr;}
 .cmp-head{background:rgba(255,255,255,.04);}
 .cmp-head .cmp-cell{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light-dim);font-weight:600;padding:18px 26px;}
 .cmp-head .cmp-cell.gold{color:var(--gold-soft);}
-.cmp-cell{padding:18px 26px;font-size:16px;border-top:1px solid rgba(255,255,255,.07);}
+.cmp-cell{padding:18px 26px;font-size:16px;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;}
 .cmp-body .cmp-row{transition:background .25s;}
 .cmp-body .cmp-row:hover{background:rgba(255,255,255,.03);}
-.cmp-car{font-weight:600;}
-.cmp-price-col{display:flex;flex-direction:column;gap:4px;}
-.cmp-old{color:#666;text-decoration:line-through;text-decoration-color:#555;font-size:13px;}
+.cmp-car-col{display:flex;flex-direction:column;gap:4px;}
+.cmp-car-name{font-weight:600;color:#fff;font-size:16px;}
+.cmp-rival{font-size:11px;color:#555;letter-spacing:.02em;}
 .cmp-new{color:var(--gold-soft);font-weight:700;font-size:clamp(16px,2.4vw,20px);font-family:var(--font-display);}
 .cmp-note{text-align:center;font-size:13px;color:#777;margin-top:22px;}
 
@@ -230,7 +233,7 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .car-card{
   background:#fff;border-radius:20px;overflow:hidden;border:1px solid rgba(17,17,17,.08);
   transition:transform .35s var(--ease),box-shadow .35s var(--ease),opacity .3s;
-  display:flex;flex-direction:column;
+  display:flex;flex-direction:column;text-decoration:none;color:inherit;
 }
 .car-card:hover{transform:translateY(-7px);box-shadow:0 26px 50px -18px rgba(0,0,0,.22);}
 .car-vis{height:184px;position:relative;overflow:hidden;background-color:#141414;}
@@ -251,8 +254,9 @@ html.anim .reveal.in{opacity:1;transform:none;}
 }
 @media(max-width:600px){
   .trip-grid,.cat-grid{grid-template-columns:1fr;}
-  .cmp-cell{padding:14px 16px;font-size:14px;}
-  .cmp-head .cmp-cell{padding:12px 16px;}
+  .cmp-cell{padding:12px 14px;font-size:14px;}
+  .cmp-head .cmp-cell{padding:12px 14px;}
+  .cmp-car-name{font-size:14px;}
   .cmp-new{font-size:16px;}
 }
 
@@ -400,7 +404,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
 <body>
 
 <!-- ================= DISCOUNT BANNER ================= -->
-<div class="disc-banner" id="discBanner">
+<div class="disc-banner" id="discBanner" style="display:none">
   <div class="wrap">
     <span class="disc-banner-text">Берёшь на неделю и дольше? Цена другая — <a href="https://wa.me/79180000000" target="_blank" rel="noopener">спроси в WhatsApp</a></span>
     <button class="disc-close" onclick="document.getElementById('discBanner').classList.add('hidden')" aria-label="Закрыть">×</button>
@@ -550,29 +554,30 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   <div class="wrap">
     <div class="sec-head reveal" style="text-align:center;">
       <span class="eyebrow" style="justify-content:center">Цена как аргумент</span>
-      <h2 class="sec-title">Почему берут у нас?</h2>
+      <h2 class="sec-title">Почему берут&nbsp;у нас?</h2>
+      <p class="cmp-subtitle">Сравниваем цены&nbsp;с другими автопрокатами Сочи</p>
     </div>
     <div class="cmp reveal d1">
       <div class="cmp-row cmp-head">
         <div class="cmp-cell">Машина</div>
-        <div class="cmp-cell gold">Лика Рулит</div>
+        <div class="cmp-cell gold">Наша цена</div>
       </div>
       <div class="cmp-body">
         <div class="cmp-row">
-          <div class="cmp-cell cmp-car">BMW кабриолет</div>
-          <div class="cmp-cell"><div class="cmp-price-col"><span class="cmp-old">другие от 12 000 ₽</span><span class="cmp-new">от 8 500 ₽</span></div></div>
+          <div class="cmp-cell"><div class="cmp-car-col"><span class="cmp-car-name">BMW&nbsp;кабриолет</span><span class="cmp-rival">другие&nbsp;от 12&nbsp;000</span></div></div>
+          <div class="cmp-cell"><span class="cmp-new">от&nbsp;8&nbsp;500&nbsp;₽</span></div>
         </div>
         <div class="cmp-row">
-          <div class="cmp-cell cmp-car">Ford Mustang</div>
-          <div class="cmp-cell"><div class="cmp-price-col"><span class="cmp-old">другие от 16 000 ₽</span><span class="cmp-new">от 13 000 ₽</span></div></div>
+          <div class="cmp-cell"><div class="cmp-car-col"><span class="cmp-car-name">Ford&nbsp;Mustang</span><span class="cmp-rival">другие&nbsp;от 16&nbsp;000</span></div></div>
+          <div class="cmp-cell"><span class="cmp-new">от&nbsp;13&nbsp;000&nbsp;₽</span></div>
         </div>
         <div class="cmp-row">
-          <div class="cmp-cell cmp-car">BMW 5 серия</div>
-          <div class="cmp-cell"><div class="cmp-price-col"><span class="cmp-old">другие от 11 000 ₽</span><span class="cmp-new">от 7 500 ₽</span></div></div>
+          <div class="cmp-cell"><div class="cmp-car-col"><span class="cmp-car-name">BMW&nbsp;5 серия</span><span class="cmp-rival">другие&nbsp;от 11&nbsp;000</span></div></div>
+          <div class="cmp-cell"><span class="cmp-new">от&nbsp;7&nbsp;500&nbsp;₽</span></div>
         </div>
         <div class="cmp-row">
-          <div class="cmp-cell cmp-car">Toyota Camry</div>
-          <div class="cmp-cell"><div class="cmp-price-col"><span class="cmp-old">другие от 7 500 ₽</span><span class="cmp-new">от 5 500 ₽</span></div></div>
+          <div class="cmp-cell"><div class="cmp-car-col"><span class="cmp-car-name">Toyota&nbsp;Camry</span><span class="cmp-rival">другие&nbsp;от 7&nbsp;500</span></div></div>
+          <div class="cmp-cell"><span class="cmp-new">от&nbsp;5&nbsp;500&nbsp;₽</span></div>
         </div>
       </div>
     </div>
@@ -595,72 +600,72 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
       <button class="pill" data-f="cross">Кроссоверы</button>
     </div>
     <div class="cat-grid">
-      <article class="car-card reveal d1" data-cat="cabrio premium">
+      <a class="car-card reveal d1" href="cars/bmw-230-kabriolet.html" data-cat="cabrio premium">
         <div class="car-vis" style="background-image:url('photos/bmw-230-kabriolet/photo_01.jpg');background-size:cover;background-position:center bottom"><span class="car-badge">Кабриолет</span></div>
         <div class="car-body">
           <h3>Прокат BMW 230 Кабриолет</h3>
-          <div class="car-specs"><span>245 л.с.</span><span>АКПП</span><span>Кабриолет</span></div>
+          <div class="car-specs"><span>245&nbsp;л.с.</span><span>АКПП</span><span>Кабриолет</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small></div>
-            <a href="cars/bmw-230-kabriolet.html" class="btn btn-gold btn-sm">Подробнее</a>
+            <div class="car-price"><b>от&nbsp;8&nbsp;500&nbsp;₽</b><small>в сутки</small></div>
+            <span class="btn btn-gold btn-sm">Подробнее</span>
           </div>
         </div>
-      </article>
-      <article class="car-card reveal d2" data-cat="premium">
+      </a>
+      <a class="car-card reveal d2" href="cars/chevrolet-camaro.html" data-cat="premium">
         <div class="car-vis" style="background-image:url('photos/chevrolet-camaro/photo_01.jpg');background-size:cover;background-position:center bottom"><span class="car-badge">Маслкар</span></div>
         <div class="car-body">
           <h3>Прокат Chevrolet Camaro</h3>
-          <div class="car-specs"><span>335 л.с.</span><span>АКПП</span><span>Маслкар</span></div>
+          <div class="car-specs"><span>335&nbsp;л.с.</span><span>АКПП</span><span>Маслкар</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 12 000 ₽</b><small>в сутки</small></div>
-            <a href="cars/chevrolet-camaro.html" class="btn btn-gold btn-sm">Подробнее</a>
+            <div class="car-price"><b>от&nbsp;12&nbsp;000&nbsp;₽</b><small>в сутки</small></div>
+            <span class="btn btn-gold btn-sm">Подробнее</span>
           </div>
         </div>
-      </article>
-      <article class="car-card reveal d3" data-cat="premium cross">
+      </a>
+      <a class="car-card reveal d3" href="cars/bmw-x5-g05.html" data-cat="premium cross">
         <div class="car-vis" style="background-image:url('photos/bmw-x5-g05/photo_01.jpg');background-size:cover;background-position:center bottom"><span class="car-badge">Внедорожник</span></div>
         <div class="car-body">
-          <h3>Прокат BMW X5 xDrive</h3>
-          <div class="car-specs"><span>340 л.с.</span><span>АКПП</span><span>Внедорожник</span></div>
+          <h3>Прокат BMW X5&nbsp;xDrive</h3>
+          <div class="car-specs"><span>340&nbsp;л.с.</span><span>АКПП</span><span>Внедорожник</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 16 000 ₽</b><small>в сутки</small></div>
-            <a href="cars/bmw-x5-g05.html" class="btn btn-gold btn-sm">Подробнее</a>
+            <div class="car-price"><b>от&nbsp;16&nbsp;000&nbsp;₽</b><small>в сутки</small></div>
+            <span class="btn btn-gold btn-sm">Подробнее</span>
           </div>
         </div>
-      </article>
-      <article class="car-card reveal d1" data-cat="premium">
+      </a>
+      <a class="car-card reveal d1" href="cars/bmw-5-g30-m-sport-lci.html" data-cat="premium">
         <div class="car-vis" style="background-image:url('photos/bmw-5-g30-m-sport-lci/photo_01.jpg');background-size:cover;background-position:center bottom"><span class="car-badge">Бизнес</span></div>
         <div class="car-body">
-          <h3>Прокат BMW 5 G30 M Sport</h3>
-          <div class="car-specs"><span>190 л.с.</span><span>АКПП</span><span>Бизнес</span></div>
+          <h3>Прокат BMW 5 G30 M&nbsp;Sport</h3>
+          <div class="car-specs"><span>190&nbsp;л.с.</span><span>АКПП</span><span>Бизнес</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small></div>
-            <a href="cars/bmw-5-g30-m-sport-lci.html" class="btn btn-gold btn-sm">Подробнее</a>
+            <div class="car-price"><b>от&nbsp;8&nbsp;500&nbsp;₽</b><small>в сутки</small></div>
+            <span class="btn btn-gold btn-sm">Подробнее</span>
           </div>
         </div>
-      </article>
-      <article class="car-card reveal d2" data-cat="family">
+      </a>
+      <a class="car-card reveal d2" href="cars/noah-gibrid.html" data-cat="family">
         <div class="car-vis" style="background-image:url('photos/noah-gibrid/photo_01.jpg');background-size:cover;background-position:center bottom"><span class="car-badge">Минивэн</span></div>
         <div class="car-body">
           <h3>Прокат Toyota Noah Гибрид</h3>
-          <div class="car-specs"><span>7 мест</span><span>АКПП</span><span>Минивэн</span></div>
+          <div class="car-specs"><span>7&nbsp;мест</span><span>АКПП</span><span>Минивэн</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small></div>
-            <a href="cars/noah-gibrid.html" class="btn btn-gold btn-sm">Подробнее</a>
+            <div class="car-price"><b>от&nbsp;4&nbsp;500&nbsp;₽</b><small>в сутки</small></div>
+            <span class="btn btn-gold btn-sm">Подробнее</span>
           </div>
         </div>
-      </article>
-      <article class="car-card reveal d3" data-cat="cross family">
+      </a>
+      <a class="car-card reveal d3" href="cars/changan-uni-t.html" data-cat="cross family">
         <div class="car-vis" style="background-image:url('photos/changan-uni-t/photo_01.jpg');background-size:cover;background-position:center bottom"><span class="car-badge">Кроссовер</span></div>
         <div class="car-body">
           <h3>Прокат Changan UNI-T</h3>
-          <div class="car-specs"><span>147 л.с.</span><span>АКПП</span><span>Кроссовер</span></div>
+          <div class="car-specs"><span>147&nbsp;л.с.</span><span>АКПП</span><span>Кроссовер</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small></div>
-            <a href="cars/changan-uni-t.html" class="btn btn-gold btn-sm">Подробнее</a>
+            <div class="car-price"><b>от&nbsp;6&nbsp;500&nbsp;₽</b><small>в сутки</small></div>
+            <span class="btn btn-gold btn-sm">Подробнее</span>
           </div>
         </div>
-      </article>
+      </a>
     </div>
     <div class="cat-more reveal"><a href="catalog.html" class="btn btn-ghost-dark btn-md">Смотреть все 46 автомобилей →</a></div>
   </div>
