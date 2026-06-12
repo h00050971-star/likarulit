@@ -193,17 +193,18 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .trip-foot .btn{padding:10px 18px;font-size:14px;}
 
 /* ---------- PRICE TABLE (screen 3) ---------- */
-.cmp{max-width:880px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1);}
-.cmp-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;align-items:center;}
+.cmp{max-width:780px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1);}
+.cmp-row{display:grid;grid-template-columns:1.4fr 1fr;align-items:center;}
 .cmp-head{background:rgba(255,255,255,.04);}
-.cmp-head .cmp-cell{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light-dim);font-weight:600;padding:20px 26px;}
+.cmp-head .cmp-cell{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light-dim);font-weight:600;padding:18px 26px;}
 .cmp-head .cmp-cell.gold{color:var(--gold-soft);}
-.cmp-cell{padding:22px 26px;font-size:16px;border-top:1px solid rgba(255,255,255,.07);}
+.cmp-cell{padding:18px 26px;font-size:16px;border-top:1px solid rgba(255,255,255,.07);}
 .cmp-body .cmp-row{transition:background .25s;}
 .cmp-body .cmp-row:hover{background:rgba(255,255,255,.03);}
 .cmp-car{font-weight:600;}
-.cmp-old{color:var(--text-light-dim);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.3);font-size:clamp(13px,2vw,16px);white-space:nowrap;}
-.cmp-new{color:var(--gold-soft);font-weight:700;font-size:clamp(14px,2.4vw,17px);font-family:var(--font-display);white-space:nowrap;}
+.cmp-price-col{display:flex;flex-direction:column;gap:4px;}
+.cmp-old{color:#666;text-decoration:line-through;text-decoration-color:#555;font-size:13px;}
+.cmp-new{color:var(--gold-soft);font-weight:700;font-size:clamp(16px,2.4vw,20px);font-family:var(--font-display);}
 .cmp-note{text-align:center;font-size:13px;color:#777;margin-top:22px;}
 
 /* ---------- CATALOG (screen 4) ---------- */
@@ -240,11 +241,9 @@ html.anim .reveal.in{opacity:1;transform:none;}
 }
 @media(max-width:600px){
   .trip-grid,.cat-grid{grid-template-columns:1fr;}
-  .cmp-mid{display:none;}
-  .cmp-row{grid-template-columns:1.4fr 1fr;}
   .cmp-cell{padding:14px 16px;font-size:14px;}
   .cmp-head .cmp-cell{padding:12px 16px;}
-  .cmp-new{font-size:16px;white-space:nowrap;}
+  .cmp-new{font-size:16px;}
 }
 
 /* ---------- HOW IT WORKS (screen 5) ---------- */
@@ -533,29 +532,24 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
     <div class="cmp reveal d1">
       <div class="cmp-row cmp-head">
         <div class="cmp-cell">Машина</div>
-        <div class="cmp-cell cmp-mid">Другие в Сочи</div>
         <div class="cmp-cell gold">Лика Рулит</div>
       </div>
       <div class="cmp-body">
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">BMW кабриолет</div>
-          <div class="cmp-cell cmp-old cmp-mid">от 12 000 ₽/сут</div>
-          <div class="cmp-cell cmp-new">от 8 500 ₽</div>
+          <div class="cmp-cell"><div class="cmp-price-col"><span class="cmp-old">другие от 12 000 ₽</span><span class="cmp-new">от 8 500 ₽</span></div></div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">Ford Mustang</div>
-          <div class="cmp-cell cmp-old cmp-mid">от 16 000 ₽/сут</div>
-          <div class="cmp-cell cmp-new">от 13 000 ₽</div>
+          <div class="cmp-cell"><div class="cmp-price-col"><span class="cmp-old">другие от 16 000 ₽</span><span class="cmp-new">от 13 000 ₽</span></div></div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">BMW 5 серия</div>
-          <div class="cmp-cell cmp-old cmp-mid">от 11 000 ₽/сут</div>
-          <div class="cmp-cell cmp-new">от 7 500 ₽</div>
+          <div class="cmp-cell"><div class="cmp-price-col"><span class="cmp-old">другие от 11 000 ₽</span><span class="cmp-new">от 7 500 ₽</span></div></div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">Toyota Camry</div>
-          <div class="cmp-cell cmp-old cmp-mid">от 7 500 ₽/сут</div>
-          <div class="cmp-cell cmp-new">от 5 500 ₽</div>
+          <div class="cmp-cell"><div class="cmp-price-col"><span class="cmp-old">другие от 7 500 ₽</span><span class="cmp-new">от 5 500 ₽</span></div></div>
         </div>
       </div>
     </div>
