@@ -165,6 +165,16 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   color:var(--gold);border-radius:100px;font-family:var(--font-display);font-weight:600;cursor:pointer;
   transition:background .25s,color .25s,transform .25s;text-decoration:none;display:inline-flex;align-items:center}
 .btn-sm-outline:hover{background:var(--gold);color:#1a1300;transform:translateY(-2px)}
+.long-hint{background:rgba(200,150,12,.08);border:1px solid rgba(200,150,12,.25);border-radius:14px;
+  padding:18px 24px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap}
+.long-hint p{font-size:14px;color:#ccc;line-height:1.5}
+.long-hint b{color:var(--gold-soft)}
+.long-hint a{white-space:nowrap;font-family:var(--font-display);font-size:13px;font-weight:600;
+  color:var(--gold);border:1.5px solid rgba(200,150,12,.5);padding:10px 20px;border-radius:100px;
+  transition:background .25s,color .25s;text-decoration:none;flex-shrink:0}
+.long-hint a:hover{background:var(--gold);color:#1a1300}
+@media(max-width:880px){.gallery{position:static;top:auto}}
 </style>
 </head>
 <body>
@@ -174,7 +184,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
       <div class="logo-ava-ring"><img src="../photos/lika.jpg" alt="Лика" class="logo-ava-img"></div>
       <div class="logo-texts">
         <span class="logo-name">Лика <span>Рулит</span></span>
-        <span class="logo-sub">Прокат авто · Сочи</span>
+        <span class="logo-sub">Прокат авто · Сочи · Абхазия</span>
       </div>
     </a>
     <div class="hdr-right">
@@ -192,6 +202,10 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
         <a href="../catalog.html">Каталог</a>
         <span>›</span>
         <span style="color:#fff">Chery Arrizo 8 Pro</span>
+      </div>
+      <div class="long-hint">
+        <p>Планируешь надолго? При аренде <b>от 7 дней — скидка от 10%.</b> Просто напиши нам — подберём машину и посчитаем цену.</p>
+        <a href="https://wa.me/79180000000?text=Интересует%20долгосрочная%20аренда%20Chery%20Arrizo%208%20Pro" target="_blank" rel="noopener">Написать в WhatsApp →</a>
       </div>
       <div class="car-layout">
         <div class="gallery">
