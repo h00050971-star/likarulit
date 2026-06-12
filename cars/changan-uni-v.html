@@ -89,7 +89,9 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   text-decoration:none;transition:background .2s,color .2s,border-color .2s;flex-shrink:0;margin-right:4px}
 .back-btn:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.5)}
 .lika-strip{display:flex;align-items:center;gap:12px;margin-bottom:28px;padding:10px 16px;
-  background:rgba(255,255,255,.03);border-radius:12px;border:1px solid rgba(255,255,255,.06)}
+  background:rgba(255,255,255,.03);border-radius:12px;border:1px solid rgba(255,255,255,.06);
+  text-decoration:none;transition:background .2s,border-color .2s}
+.lika-strip:hover{background:rgba(255,255,255,.06);border-color:rgba(200,150,12,.3)}
 .ls-ava-ring{width:40px;height:40px;border-radius:50%;flex-shrink:0;padding:2.5px;
   background:linear-gradient(135deg,#f9c300 0%,#f56040 25%,#df3078 50%,#813ac5 75%,#37aae0 100%)}
 .ls-ava-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid #111;display:block}
@@ -187,13 +189,13 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
         <span>›</span>
         <span style="color:#fff">Changan UNI-V</span>
       </div>
-      <div class="lika-strip">
+      <a class="lika-strip" href="../index.html#lika">
         <div class="ls-ava-ring"><img src="../photos/lika.jpg" alt="Лика" class="ls-ava-img"></div>
         <div>
           <span class="ls-name">Лика Самарцева</span>
           <span class="ls-sub">15 лет с тачками в Сочи · сервис · прокат · пригон</span>
         </div>
-      </div>
+      </a>
       <div class="car-layout">
         <div class="gallery">
           <div class="photo-wrap">
