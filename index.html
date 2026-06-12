@@ -220,15 +220,19 @@ html.anim .reveal.in{opacity:1;transform:none;}
 /* ---- MOBILE hero (≤980px) ---- */
 @media(max-width:980px){
   .hero{padding-bottom:0;}
-  .hero-stats{position:static;margin-top:48px;}
+  .hero-stats{position:static;margin-top:20px;}
   .hero-scroll{display:none;}
 }
 @media(max-width:600px){
   .wrap{padding:0 18px;}
   .header-phone{display:none;}
   .header-inner{height:64px;}
-  .hero-stats .wrap{flex-direction:column;align-items:flex-start;gap:14px;}
-  .hero-stats .stat{padding:0!important;}
+  .hero-stats .wrap{
+    border-top:none;padding-top:0;
+    flex-direction:column;align-items:flex-start;gap:10px;
+  }
+  .hero-stats .stat{padding:0!important;font-size:14px;gap:8px;}
+  .hero-stats .stat .dot{flex-shrink:0;}
   .hero-cta .btn{flex:1;}
 }
 
@@ -500,7 +504,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
     <div class="hero-left">
       <p class="hero-site-label reveal">Сайт автопроката Лики Самарцевой</p>
       <h1 class="reveal d1">Сочи — это <span class="hl">600&nbsp;км дорог</span>,<br>горы и&nbsp;Абхазия</h1>
-      <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от&nbsp;4&nbsp;500&nbsp;₽/сутки</b> · <span style="white-space:nowrap">Подача за час · На&nbsp;день и&nbsp;долгосрок</span></p>
+      <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от&nbsp;4&nbsp;500&nbsp;₽/сутки</b> <span style="white-space:nowrap">· Подача за час · На&nbsp;день и&nbsp;долгосрок</span></p>
       <div class="hero-cta reveal d3">
         <a href="#catalog" class="btn btn-gold btn-lg">Выбрать машину</a>
         <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-md" target="_blank" rel="noopener">Написать в WhatsApp</a>
