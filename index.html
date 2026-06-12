@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Лика Рулит — Прокат авто в Сочи | likarulit.ru</title>
-<meta name="description" content="Прокат авто в Сочи — BMW, Mustang, кабриолеты от 2 100 ₽/сутки. Подача за час, аэропорт Адлер, выезд в Абхазию. 46 автомобилей, работаем 24/7.">
+<meta name="description" content="Прокат авто в Сочи — BMW, Mustang, кабриолеты от 4 500 ₽/сутки. Подача за час, аэропорт Адлер, выезд в Абхазию. 46 автомобилей, работаем 24/7.">
 <meta property="og:title" content="Лика Рулит — Прокат авто в Сочи">
-<meta property="og:description" content="BMW, Mustang, кабриолеты — от 2 100 ₽/сутки. Подача за час. Выезд в Абхазию.">
+<meta property="og:description" content="BMW, Mustang, кабриолеты — от 4 500 ₽/сутки. Подача за час. Выезд в Абхазию.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://likarulit.ru">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -193,7 +193,8 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .trip-foot .btn{padding:10px 18px;font-size:14px;}
 
 /* ---------- PRICE TABLE (screen 3) ---------- */
-.cmp{max-width:880px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1);}
+.cmp{max-width:880px;margin:0 auto;border-radius:20px;overflow-x:auto;border:1px solid rgba(255,255,255,.1);}
+.cmp>*{min-width:520px;}
 .cmp-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;align-items:center;}
 .cmp-head{background:rgba(255,255,255,.04);}
 .cmp-head .cmp-cell{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light-dim);font-weight:600;padding:20px 26px;}
@@ -202,8 +203,8 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .cmp-body .cmp-row{transition:background .25s;}
 .cmp-body .cmp-row:hover{background:rgba(255,255,255,.03);}
 .cmp-car{font-weight:600;}
-.cmp-old{color:var(--text-light-dim);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.3);}
-.cmp-new{color:var(--gold-soft);font-weight:700;font-size:17px;font-family:var(--font-display);}
+.cmp-old{color:var(--text-light-dim);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.3);font-size:clamp(13px,2vw,16px);white-space:nowrap;}
+.cmp-new{color:var(--gold-soft);font-weight:700;font-size:clamp(14px,2.4vw,17px);font-family:var(--font-display);white-space:nowrap;}
 .cmp-note{text-align:center;font-size:13px;color:#777;margin-top:22px;}
 
 /* ---------- CATALOG (screen 4) ---------- */
@@ -333,6 +334,33 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
 .foot-social svg{width:20px;height:20px;}
 .foot-bottom{margin-top:46px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);font-size:13px;color:#777;text-align:center;}
 
+/* ---------- LONG-STAY DISCOUNTS ---------- */
+.longstay{background:var(--dark-2);}
+.longstay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.ls-card{border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:32px 28px;display:flex;flex-direction:column;gap:0;transition:transform .3s var(--ease),border-color .3s;}
+.ls-card:hover{transform:translateY(-5px);border-color:rgba(200,150,12,.4);}
+.ls-badge{display:inline-block;background:var(--gold);color:#1a1300;font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:.06em;padding:7px 14px;border-radius:100px;margin-bottom:20px;}
+.ls-days{font-family:var(--font-display);font-size:clamp(28px,3.5vw,40px);font-weight:700;letter-spacing:-.02em;}
+.ls-label{font-size:14px;color:#888;margin-top:4px;margin-bottom:20px;}
+.ls-desc{font-size:15px;color:#ccc;line-height:1.55;flex:1;}
+.ls-cta{margin-top:24px;}
+.ls-cta a{display:inline-flex;align-items:center;justify-content:center;width:100%;padding:14px;border-radius:100px;
+  font-family:var(--font-display);font-size:14px;font-weight:600;
+  background:transparent;border:1.5px solid rgba(200,150,12,.45);color:var(--gold);
+  transition:background .25s,color .25s,transform .2s;text-decoration:none;}
+.ls-cta a:hover{background:var(--gold);color:#1a1300;transform:translateY(-2px);}
+@media(max-width:880px){.longstay-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.longstay-grid{grid-template-columns:1fr;}}
+
+/* ---------- DISCOUNT BANNER ---------- */
+.disc-banner{background:var(--gold);color:#1a1300;padding:14px 0;display:flex;align-items:center;position:relative;z-index:101;}
+.disc-banner.hidden{display:none;}
+.disc-banner .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.disc-banner-text{font-size:14px;font-weight:600;}
+.disc-banner-text a{color:#1a1300;font-weight:700;text-decoration:underline;}
+.disc-close{background:none;border:none;cursor:pointer;color:#1a1300;font-size:22px;line-height:1;padding:0 4px;flex-shrink:0;opacity:.7;}
+.disc-close:hover{opacity:1;}
+
 /* ---------- FLOATING WHATSAPP ---------- */
 .fab{position:fixed;right:24px;bottom:24px;z-index:120;width:62px;height:62px;border-radius:50%;background:var(--wa);
   display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,.45);
@@ -358,6 +386,14 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
 </head>
 <body>
 
+<!-- ================= DISCOUNT BANNER ================= -->
+<div class="disc-banner" id="discBanner">
+  <div class="wrap">
+    <span class="disc-banner-text">Берёшь на неделю и дольше? Цена другая — <a href="https://wa.me/79180000000" target="_blank" rel="noopener">спроси в WhatsApp</a></span>
+    <button class="disc-close" onclick="document.getElementById('discBanner').classList.add('hidden')" aria-label="Закрыть">×</button>
+  </div>
+</div>
+
 <!-- ================= HEADER ================= -->
 <header id="top">
   <div class="wrap header-inner">
@@ -377,7 +413,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   <div class="hero-grid-lines"></div>
   <div class="wrap hero-inner">
     <h1 class="reveal">Сочи — это <span class="hl">600 км дорог</span>, горы и Абхазия</h1>
-    <p class="hero-sub reveal d1">BMW, Mustang, кабриолеты — <b>от 2 100 ₽/сутки</b>. Подача за час.</p>
+    <p class="hero-sub reveal d1">BMW, Mustang, кабриолеты — <b>от 4 500 ₽/сутки</b>. Подача за час.</p>
     <div class="hero-cta reveal d2">
       <a href="#catalog" class="btn btn-gold btn-lg">Выбрать машину</a>
       <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-lg" target="_blank" rel="noopener">Написать в WhatsApp</a>
@@ -397,8 +433,8 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
 <!-- ================= TICKER ================= -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>BMW 230 Кабриолет</span><span>Ford Mustang</span><span>Подача за час</span><span>Выезд в Абхазию</span><span>от 2 100 ₽/сутки</span><span>Красная Поляна</span><span>46 автомобилей</span><span>Работаем 24/7</span>
-    <span>BMW 230 Кабриолет</span><span>Ford Mustang</span><span>Подача за час</span><span>Выезд в Абхазию</span><span>от 2 100 ₽/сутки</span><span>Красная Поляна</span><span>46 автомобилей</span><span>Работаем 24/7</span>
+    <span>BMW 230 Кабриолет</span><span>Ford Mustang</span><span>Подача за час</span><span>Выезд в Абхазию</span><span>от 4 500 ₽/сутки</span><span>Красная Поляна</span><span>46 автомобилей</span><span>Работаем 24/7</span>
+    <span>BMW 230 Кабриолет</span><span>Ford Mustang</span><span>Подача за час</span><span>Выезд в Абхазию</span><span>от 4 500 ₽/сутки</span><span>Красная Поляна</span><span>46 автомобилей</span><span>Работаем 24/7</span>
   </div>
 </div>
 
@@ -417,7 +453,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <p>Закат, берег, идеальный кадр</p>
           <div class="trip-car">BMW 230 Кабриолет</div>
           <div class="trip-foot">
-            <div class="trip-price">от 3 800 ₽<small> /сут</small></div>
+            <div class="trip-price">от 8 500 ₽<small> /сут</small></div>
             <a href="#catalog" class="btn btn-ghost-dark">Смотреть</a>
           </div>
         </div>
@@ -429,7 +465,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <p>Гагра, Рица, Новый Афон — 2 дня</p>
           <div class="trip-car">BMW X5</div>
           <div class="trip-foot">
-            <div class="trip-price">от 9 900 ₽<small> /сут</small></div>
+            <div class="trip-price">от 16 000 ₽<small> /сут</small></div>
             <a href="#catalog" class="btn btn-ghost-dark">Смотреть</a>
           </div>
         </div>
@@ -441,7 +477,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <p>Красная Поляна и виражи</p>
           <div class="trip-car">Camaro / Mustang</div>
           <div class="trip-foot">
-            <div class="trip-price">от 5 900 ₽<small> /сут</small></div>
+            <div class="trip-price">от 12 000 ₽<small> /сут</small></div>
             <a href="#catalog" class="btn btn-ghost-dark">Смотреть</a>
           </div>
         </div>
@@ -453,7 +489,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <p>Набережная, ужин, представительски</p>
           <div class="trip-car">BMW 7</div>
           <div class="trip-foot">
-            <div class="trip-price">от 2 000 ₽<small> /сут</small></div>
+            <div class="trip-price">от 7 000 ₽<small> /сут</small></div>
             <a href="#catalog" class="btn btn-ghost-dark">Смотреть</a>
           </div>
         </div>
@@ -465,7 +501,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <p>Олимпийский парк, Дендрарий, Сочи Парк</p>
           <div class="trip-car">Noah / Kia Carnival</div>
           <div class="trip-foot">
-            <div class="trip-price">от 2 500 ₽<small> /сут</small></div>
+            <div class="trip-price">от 4 500 ₽<small> /сут</small></div>
             <a href="#catalog" class="btn btn-ghost-dark">Смотреть</a>
           </div>
         </div>
@@ -477,7 +513,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <p>Побережье, музыка, свобода</p>
           <div class="trip-car">Chery / Changan</div>
           <div class="trip-foot">
-            <div class="trip-price">от 2 100 ₽<small> /сут</small></div>
+            <div class="trip-price">от 5 000 ₽<small> /сут</small></div>
             <a href="#catalog" class="btn btn-ghost-dark">Смотреть</a>
           </div>
         </div>
@@ -491,38 +527,38 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   <div class="wrap">
     <div class="sec-head reveal" style="text-align:center;">
       <span class="eyebrow" style="justify-content:center">Цена как аргумент</span>
-      <h2 class="sec-title">Почему берут у нас,<br>а не у крупных прокатов</h2>
+      <h2 class="sec-title">Почему берут у нас</h2>
     </div>
     <div class="cmp reveal d1">
       <div class="cmp-row cmp-head">
         <div class="cmp-cell">Машина</div>
-        <div class="cmp-cell">У конкурентов</div>
+        <div class="cmp-cell">Другие в Сочи</div>
         <div class="cmp-cell gold">Лика Рулит</div>
       </div>
       <div class="cmp-body">
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">BMW кабриолет</div>
-          <div class="cmp-cell cmp-old">от 10 500 ₽/сут</div>
-          <div class="cmp-cell cmp-new">от 3 800 ₽</div>
+          <div class="cmp-cell cmp-old">от 12 000 ₽/сут</div>
+          <div class="cmp-cell cmp-new">от 8 500 ₽</div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">Ford Mustang</div>
-          <div class="cmp-cell cmp-old">от 9 400 ₽/сут</div>
-          <div class="cmp-cell cmp-new">от 7 900 ₽</div>
+          <div class="cmp-cell cmp-old">от 16 000 ₽/сут</div>
+          <div class="cmp-cell cmp-new">от 13 000 ₽</div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">BMW 5 серия</div>
-          <div class="cmp-cell cmp-old">от 5 200 ₽/сут</div>
-          <div class="cmp-cell cmp-new">от 3 800 ₽</div>
+          <div class="cmp-cell cmp-old">от 11 000 ₽/сут</div>
+          <div class="cmp-cell cmp-new">от 7 500 ₽</div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">Toyota Camry</div>
-          <div class="cmp-cell cmp-old">от 4 500 ₽/сут</div>
-          <div class="cmp-cell cmp-new">от 3 900 ₽</div>
+          <div class="cmp-cell cmp-old">от 7 500 ₽/сут</div>
+          <div class="cmp-cell cmp-new">от 5 500 ₽</div>
         </div>
       </div>
     </div>
-    <p class="cmp-note reveal d2">данные конкурентов актуальны на июнь 2025</p>
+    <p class="cmp-note reveal d2">мониторинг цен в Сочи, июнь 2026</p>
   </div>
 </section>
 
@@ -547,7 +583,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <h3>Прокат BMW 230 Кабриолет</h3>
           <div class="car-specs"><span>245 л.с.</span><span>АКПП</span><span>Кабриолет</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 3 800 ₽</b><small>в сутки</small></div>
+            <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small></div>
             <a href="cars/bmw-230-kabriolet.html" class="btn btn-gold btn-sm">Подробнее</a>
           </div>
         </div>
@@ -558,7 +594,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <h3>Прокат Chevrolet Camaro</h3>
           <div class="car-specs"><span>335 л.с.</span><span>АКПП</span><span>Маслкар</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 5 900 ₽</b><small>в сутки</small></div>
+            <div class="car-price"><b>от 12 000 ₽</b><small>в сутки</small></div>
             <a href="cars/chevrolet-camaro.html" class="btn btn-gold btn-sm">Подробнее</a>
           </div>
         </div>
@@ -569,7 +605,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <h3>Прокат BMW X5 xDrive</h3>
           <div class="car-specs"><span>340 л.с.</span><span>АКПП</span><span>Внедорожник</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 9 900 ₽</b><small>в сутки</small></div>
+            <div class="car-price"><b>от 16 000 ₽</b><small>в сутки</small></div>
             <a href="cars/bmw-x5-g05.html" class="btn btn-gold btn-sm">Подробнее</a>
           </div>
         </div>
@@ -580,7 +616,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <h3>Прокат BMW 5 G30 M Sport</h3>
           <div class="car-specs"><span>190 л.с.</span><span>АКПП</span><span>Бизнес</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
+            <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small></div>
             <a href="cars/bmw-5-g30-m-sport-lci.html" class="btn btn-gold btn-sm">Подробнее</a>
           </div>
         </div>
@@ -591,7 +627,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <h3>Прокат Toyota Noah Гибрид</h3>
           <div class="car-specs"><span>7 мест</span><span>АКПП</span><span>Минивэн</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
+            <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small></div>
             <a href="cars/noah-gibrid.html" class="btn btn-gold btn-sm">Подробнее</a>
           </div>
         </div>
@@ -602,13 +638,46 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
           <h3>Прокат Changan UNI-T</h3>
           <div class="car-specs"><span>147 л.с.</span><span>АКПП</span><span>Кроссовер</span></div>
           <div class="car-foot">
-            <div class="car-price"><b>от 2 100 ₽</b><small>в сутки</small></div>
+            <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small></div>
             <a href="cars/changan-uni-t.html" class="btn btn-gold btn-sm">Подробнее</a>
           </div>
         </div>
       </article>
     </div>
     <div class="cat-more reveal"><a href="catalog.html" class="btn btn-ghost-dark btn-md">Смотреть все 46 автомобилей →</a></div>
+  </div>
+</section>
+
+<!-- ================= LONG-STAY DISCOUNTS ================= -->
+<section class="sec longstay" id="discounts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Берёшь надолго — платишь меньше</span>
+      <h2 class="sec-title">Живёшь в Сочи?<br>Машина на месяц <span style="color:var(--gold-soft)">дешевле каршеринга</span></h2>
+    </div>
+    <div class="longstay-grid">
+      <div class="ls-card reveal d1">
+        <span class="ls-badge">−10%</span>
+        <div class="ls-days">7 дней</div>
+        <div class="ls-label">и больше</div>
+        <div class="ls-desc">Неделя у моря, командировка, отпуск без лишних расходов. Один раз договорился — едешь спокойно.</div>
+        <div class="ls-cta"><a href="https://wa.me/79180000000" target="_blank" rel="noopener">Спросить цену →</a></div>
+      </div>
+      <div class="ls-card reveal d2">
+        <span class="ls-badge">−15%</span>
+        <div class="ls-days">14 дней</div>
+        <div class="ls-label">и больше</div>
+        <div class="ls-desc">Две недели — и цена за день уже заметно ниже. Хороший вариант для тех, кто работает в Сочи или переезжает на лето.</div>
+        <div class="ls-cta"><a href="https://wa.me/79180000000" target="_blank" rel="noopener">Спросить цену →</a></div>
+      </div>
+      <div class="ls-card reveal d3">
+        <span class="ls-badge">−20%</span>
+        <div class="ls-days">30 дней</div>
+        <div class="ls-label">и больше</div>
+        <div class="ls-desc">Месяц выходит дешевле любого каршеринга. Своя машина, без ограничений по пробегу, можно в Абхазию.</div>
+        <div class="ls-cta"><a href="https://wa.me/79180000000" target="_blank" rel="noopener">Спросить цену →</a></div>
+      </div>
+    </div>
   </div>
 </section>
 

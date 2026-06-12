@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Каталог авто — Прокат в Сочи | Лика Рулит</title>
-<meta name="description" content="Полный каталог автомобилей в прокат в Сочи — 46 машин. BMW, кабриолеты, кроссоверы, семейные. От 0 ₽/сутки.">
+<meta name="description" content="Полный каталог автомобилей в прокат в Сочи — 46 машин. BMW, кабриолеты, кроссоверы, семейные. От 4500 ₽/сутки.">
 <meta property="og:title" content="Каталог авто — Прокат в Сочи | Лика Рулит">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Onest:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -95,11 +95,21 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 .car-foot{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .car-price b{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--gold-soft)}
 .car-price small{font-size:12px;color:#666;display:block}
+.discount-hint{display:block;font-size:11px;color:#888;margin-top:2px;font-style:italic}
 .btn-sm-outline{font-size:12px;padding:9px 18px;background:transparent;border:1.5px solid var(--gold);
   color:var(--gold);border-radius:100px;font-family:var(--font-display);font-weight:600;cursor:pointer;
   transition:background .25s,color .25s,transform .25s;text-decoration:none;display:inline-flex;align-items:center}
 .btn-sm-outline:hover{background:var(--gold);color:#1a1300;transform:translateY(-2px)}
 .car-card.hidden{display:none}
+.long-hint{background:rgba(200,150,12,.08);border:1px solid rgba(200,150,12,.25);border-radius:14px;
+  padding:18px 24px;margin-bottom:32px;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap}
+.long-hint p{font-size:14px;color:#ccc;line-height:1.5}
+.long-hint b{color:var(--gold-soft)}
+.long-hint a{white-space:nowrap;font-family:var(--font-display);font-size:13px;font-weight:600;
+  color:var(--gold);border:1.5px solid rgba(200,150,12,.5);padding:10px 20px;border-radius:100px;
+  transition:background .25s,color .25s;text-decoration:none;flex-shrink:0}
+.long-hint a:hover{background:var(--gold);color:#1a1300}
 </style>
 </head>
 <body>
@@ -127,6 +137,10 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
         <button class="pill" data-filter="family">Семейные</button>
         <button class="pill" data-filter="crossover">Кроссоверы</button>
       </div>
+      <div class="long-hint">
+        <p>Планируешь надолго? При аренде <b>от 7 дней — скидка от 10%.</b> Просто напиши нам — подберём машину и посчитаем цену.</p>
+        <a href="https://wa.me/79180000000">Написать в WhatsApp →</a>
+      </div>
       <div class="cars-grid" id="carsGrid">
 <article class="car-card" data-cat="cabriolet">
   <div class="car-vis" style="background-image:url('photos/audi-tt/photo_01.jpg')">
@@ -135,7 +149,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Audi TT</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 6 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/audi-tt.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -147,7 +161,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Audi TT FV</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 7 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 10 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/audi-tt-fv.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -159,7 +173,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 230 Кабриолет</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-230-kabriolet.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -171,7 +185,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 4 Gran Coupe</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-4-gran-coupe.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -183,7 +197,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 430i 2.0 Gran Coupe</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 10 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-430i-2-0-gran-coupe.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -195,7 +209,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 430i F33</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 5 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 12 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-430i-f33.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -207,7 +221,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 5 G30 2.0</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-5-g30-2-0.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -219,7 +233,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 5 G30 M Sport LCI</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-5-g30-m-sport-lci.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -231,7 +245,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 520D G30 M sport</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-520d-g30-m-sport.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -243,7 +257,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 520i</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 5 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-520i.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -255,7 +269,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 520i АКПП</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 9 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-520i-akpp.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -267,7 +281,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 7 740Li</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 000 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-7-740li.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -279,7 +293,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW 7 750Li</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-7-750li.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -291,7 +305,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW M5 Sport</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 12 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-m5-sport.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -303,7 +317,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW M5 Sport 4WD</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 13 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-m5-sport-4wd.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -315,7 +329,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW X5 4.0 xDrive</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 11 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 17 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-x5-4-0-xdrive.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -327,7 +341,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат BMW X5 G05</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 9 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 16 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/bmw-x5-g05.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -339,7 +353,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Changan Lamore</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 100 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/changan-lamore.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -351,7 +365,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Changan UNI-T</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/changan-uni-t.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -363,7 +377,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Changan UNI-T 2</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 100 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/changan-uni-t-2.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -375,7 +389,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Changan UNI-V</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/changan-uni-v.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -387,7 +401,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chery Arrizo 8</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chery-arrizo-8.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -399,7 +413,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chery Arrizo 8 Pro</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 100 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chery-arrizo-8-pro.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -411,7 +425,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chery Tiggo 7 pro max</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chery-tiggo-7-pro-max.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -423,7 +437,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chery Tiggo 8 Pro e+</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chery-tiggo-8-pro-e.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -435,7 +449,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chery Tiggo 8 pro max</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chery-tiggo-8-pro-max.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -447,7 +461,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chery Tiggo Pro Plug-in Hybrid</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chery-tiggo-pro-plug-in-hybrid.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -459,7 +473,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chevrolet Camaro</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 5 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 12 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chevrolet-camaro.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -471,7 +485,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chevrolet Camaro GT 8</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 14 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chevrolet-camaro-gt-8.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -483,7 +497,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Chevrolet Trax</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/chevrolet-trax.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -495,7 +509,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Ford Kuga</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/ford-kuga.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -507,7 +521,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Ford Mustang</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 7 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 13 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/ford-mustang.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -519,7 +533,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Ford Mustang Shelby GT</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 6 000 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 17 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/ford-mustang-shelby-gt.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -531,7 +545,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Geely Coolray</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 6 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/geely-coolray.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -543,7 +557,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Haval Jolion</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 6 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/haval-jolion.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -555,7 +569,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Kia Carnival</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 7 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/kia-carnival.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -567,7 +581,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Lexus ES250</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/lexus-es250.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -579,7 +593,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Lexus GS350</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 4 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 9 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/lexus-gs350.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -591,7 +605,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Mercedes E200</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 8 000 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/mercedes-e200.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -603,7 +617,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Mercedes GLK220D</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 800 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 6 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/mercedes-glk220d.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -615,7 +629,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Mercedes-Benz E200 black</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/mercedes-benz-e200-black.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -627,7 +641,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Nissan Patrol</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 8 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/nissan-patrol.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -639,7 +653,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Noah Гибрид</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/noah-gibrid.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -651,7 +665,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Toyota Camry</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 3 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/toyota-camry.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -663,7 +677,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Toyota Esquire</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 500 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 5 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/toyota-esquire.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
@@ -675,7 +689,7 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <div class="car-body">
     <div class="car-name">Прокат Toyota Serena</div>
     <div class="car-foot">
-      <div class="car-price"><b>от 2 900 ₽</b><small>в сутки</small></div>
+      <div class="car-price"><b>от 4 500 ₽</b><small>в сутки</small><span class="discount-hint">скидки от 7 дней</span></div>
       <a href="cars/toyota-serena.html" class="btn-sm-outline">Подробнее</a>
     </div>
   </div>
