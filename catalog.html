@@ -24,7 +24,11 @@ a{text-decoration:none;color:inherit}
   transition:background .3s}
 .hdr.scrolled{background:rgba(13,13,13,.82)}
 .hdr-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
-.logo{display:flex;flex-direction:column;gap:2px;line-height:1}
+.logo{display:flex;flex-direction:row;gap:10px;align-items:center;text-decoration:none}
+.logo-ava-ring{width:38px;height:38px;border-radius:50%;flex-shrink:0;padding:2.5px;
+  background:linear-gradient(135deg,#f9c300 0%,#f56040 25%,#df3078 50%,#813ac5 75%,#37aae0 100%)}
+.logo-ava-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid var(--dark);display:block}
+.logo-texts{display:flex;flex-direction:column;gap:2px;line-height:1}
 .logo-name{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:-.01em}
 .logo-name span{color:var(--gold-soft)}
 .logo-sub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#AAA}
@@ -116,8 +120,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 <header class="hdr" id="top">
   <div class="wrap hdr-inner">
     <a href="index.html" class="logo">
-      <span class="logo-name">Лика <span>Рулит</span></span>
-      <span class="logo-sub">Прокат авто · Сочи</span>
+      <div class="logo-ava-ring"><img src="photos/lika.jpg" alt="Лика" class="logo-ava-img"></div>
+      <div class="logo-texts">
+        <span class="logo-name">Лика <span>Рулит</span></span>
+        <span class="logo-sub">Прокат авто · Сочи</span>
+      </div>
     </a>
     <div class="hdr-right">
       <a href="tel:+79180000000" class="hdr-phone">+7 918 000-00-00<span>Звонок · Сочи</span></a>

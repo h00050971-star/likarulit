@@ -193,8 +193,7 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .trip-foot .btn{padding:10px 18px;font-size:14px;}
 
 /* ---------- PRICE TABLE (screen 3) ---------- */
-.cmp{max-width:880px;margin:0 auto;border-radius:20px;overflow-x:auto;border:1px solid rgba(255,255,255,.1);}
-.cmp>*{min-width:520px;}
+.cmp{max-width:880px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1);}
 .cmp-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;align-items:center;}
 .cmp-head{background:rgba(255,255,255,.04);}
 .cmp-head .cmp-cell{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light-dim);font-weight:600;padding:20px 26px;}
@@ -241,9 +240,11 @@ html.anim .reveal.in{opacity:1;transform:none;}
 }
 @media(max-width:600px){
   .trip-grid,.cat-grid{grid-template-columns:1fr;}
-  .cmp-cell{padding:15px 16px;font-size:14px;}
-  .cmp-head .cmp-cell{padding:14px 16px;}
-  .cmp-new{font-size:16px;}
+  .cmp-mid{display:none;}
+  .cmp-row{grid-template-columns:1.4fr 1fr;}
+  .cmp-cell{padding:14px 16px;font-size:14px;}
+  .cmp-head .cmp-cell{padding:12px 16px;}
+  .cmp-new{font-size:16px;white-space:nowrap;}
 }
 
 /* ---------- HOW IT WORKS (screen 5) ---------- */
@@ -527,33 +528,33 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   <div class="wrap">
     <div class="sec-head reveal" style="text-align:center;">
       <span class="eyebrow" style="justify-content:center">Цена как аргумент</span>
-      <h2 class="sec-title">Почему берут у нас</h2>
+      <h2 class="sec-title">Почему берут у нас?</h2>
     </div>
     <div class="cmp reveal d1">
       <div class="cmp-row cmp-head">
         <div class="cmp-cell">Машина</div>
-        <div class="cmp-cell">Другие в Сочи</div>
+        <div class="cmp-cell cmp-mid">Другие в Сочи</div>
         <div class="cmp-cell gold">Лика Рулит</div>
       </div>
       <div class="cmp-body">
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">BMW кабриолет</div>
-          <div class="cmp-cell cmp-old">от 12 000 ₽/сут</div>
+          <div class="cmp-cell cmp-old cmp-mid">от 12 000 ₽/сут</div>
           <div class="cmp-cell cmp-new">от 8 500 ₽</div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">Ford Mustang</div>
-          <div class="cmp-cell cmp-old">от 16 000 ₽/сут</div>
+          <div class="cmp-cell cmp-old cmp-mid">от 16 000 ₽/сут</div>
           <div class="cmp-cell cmp-new">от 13 000 ₽</div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">BMW 5 серия</div>
-          <div class="cmp-cell cmp-old">от 11 000 ₽/сут</div>
+          <div class="cmp-cell cmp-old cmp-mid">от 11 000 ₽/сут</div>
           <div class="cmp-cell cmp-new">от 7 500 ₽</div>
         </div>
         <div class="cmp-row">
           <div class="cmp-cell cmp-car">Toyota Camry</div>
-          <div class="cmp-cell cmp-old">от 7 500 ₽/сут</div>
+          <div class="cmp-cell cmp-old cmp-mid">от 7 500 ₽/сут</div>
           <div class="cmp-cell cmp-new">от 5 500 ₽</div>
         </div>
       </div>

@@ -26,7 +26,11 @@ a{text-decoration:none;color:inherit}
   transition:background .3s}
 .hdr.scrolled{background:rgba(13,13,13,.82)}
 .hdr-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
-.logo{display:flex;flex-direction:column;gap:2px;line-height:1}
+.logo{display:flex;flex-direction:row;gap:10px;align-items:center;text-decoration:none}
+.logo-ava-ring{width:38px;height:38px;border-radius:50%;flex-shrink:0;padding:2.5px;
+  background:linear-gradient(135deg,#f9c300 0%,#f56040 25%,#df3078 50%,#813ac5 75%,#37aae0 100%)}
+.logo-ava-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid var(--dark);display:block}
+.logo-texts{display:flex;flex-direction:column;gap:2px;line-height:1}
 .logo-name{font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:-.01em}
 .logo-name span{color:var(--gold-soft)}
 .logo-sub{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#AAA}
@@ -74,10 +78,21 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 @media(max-width:600px){.fab{right:16px;bottom:16px;width:54px;height:54px}}
 
 /* Car page */
-.car-hero{padding:120px 0 64px;background:var(--dark-2)}
-.breadcrumb{font-size:13px;color:#666;margin-bottom:28px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.car-hero{padding:100px 0 64px;background:var(--dark-2)}
+.breadcrumb{font-size:13px;color:#666;margin-bottom:16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .breadcrumb a{color:#888;transition:color .2s}.breadcrumb a:hover{color:#fff}
 .breadcrumb span{color:#444}
+.back-btn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;
+  border-radius:50%;border:1.5px solid rgba(255,255,255,.2);color:#aaa;font-size:17px;
+  text-decoration:none;transition:background .2s,color .2s,border-color .2s;flex-shrink:0;margin-right:4px}
+.back-btn:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.5)}
+.lika-strip{display:flex;align-items:center;gap:12px;margin-bottom:28px;padding:10px 16px;
+  background:rgba(255,255,255,.03);border-radius:12px;border:1px solid rgba(255,255,255,.06)}
+.ls-ava-ring{width:40px;height:40px;border-radius:50%;flex-shrink:0;padding:2.5px;
+  background:linear-gradient(135deg,#f9c300 0%,#f56040 25%,#df3078 50%,#813ac5 75%,#37aae0 100%)}
+.ls-ava-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid #111;display:block}
+.ls-name{display:block;font-size:13px;font-weight:600;color:#fff}
+.ls-sub{font-size:11px;color:#777;display:block;margin-top:1px}
 .car-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 @media(max-width:880px){.car-layout{grid-template-columns:1fr}}
 .gallery{position:sticky;top:96px}
@@ -147,8 +162,11 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
 <header class="hdr" id="top">
   <div class="wrap hdr-inner">
     <a href="../index.html" class="logo">
-      <span class="logo-name">Лика <span>Рулит</span></span>
-      <span class="logo-sub">Прокат авто · Сочи</span>
+      <div class="logo-ava-ring"><img src="../photos/lika.jpg" alt="Лика" class="logo-ava-img"></div>
+      <div class="logo-texts">
+        <span class="logo-name">Лика <span>Рулит</span></span>
+        <span class="logo-sub">Прокат авто · Сочи</span>
+      </div>
     </a>
     <div class="hdr-right">
       <a href="tel:+79180000000" class="hdr-phone">+7 918 000-00-00<span>Звонок · Сочи</span></a>
@@ -160,11 +178,19 @@ footer{background:var(--dark);padding:64px 0 32px;border-top:1px solid rgba(255,
   <section class="car-hero">
     <div class="wrap">
       <div class="breadcrumb">
+        <a href="../catalog.html" class="back-btn" aria-label="Назад в каталог">&#8592;</a>
         <a href="../index.html">Главная</a>
         <span>›</span>
         <a href="../catalog.html">Каталог</a>
         <span>›</span>
         <span style="color:#fff">Audi TT</span>
+      </div>
+      <div class="lika-strip">
+        <div class="ls-ava-ring"><img src="../photos/lika.jpg" alt="Лика" class="ls-ava-img"></div>
+        <div>
+          <span class="ls-name">Лика Самарцева</span>
+          <span class="ls-sub">15 лет с тачками в Сочи · сервис · прокат · пригон</span>
+        </div>
       </div>
       <div class="car-layout">
         <div class="gallery">
@@ -280,6 +306,18 @@ function navPhoto(dir) {
   var t = _thumbs[_idx];
   setPhoto(t, t.dataset.src);
 }
+(function(){
+  var wrap = document.querySelector('.photo-wrap');
+  var _sx = 0, _sy = 0;
+  wrap.addEventListener('touchstart', function(e){
+    _sx = e.touches[0].clientX; _sy = e.touches[0].clientY;
+  }, {passive:true});
+  wrap.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - _sx;
+    var dy = e.changedTouches[0].clientY - _sy;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) navPhoto(dx < 0 ? 1 : -1);
+  }, {passive:true});
+})();
 </script>
 </body>
 </html>
