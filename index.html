@@ -161,7 +161,7 @@ html.anim .reveal.in{opacity:1;transform:none;}
 
 /* ---- DESKTOP hero (≥981px) ---- */
 /* ---- highlights — только десктоп ---- */
-.hero-highlights{display:none;flex-wrap:nowrap;justify-content:space-between;width:100%;margin-top:16px;}
+.hero-highlights{display:none;flex-wrap:nowrap;justify-content:space-between;width:100%;}
 .hh-item{display:flex;flex-direction:column;align-items:center;gap:5px;text-decoration:none;color:#fff;flex:1 1 0;min-width:0;}
 .hh-ring{
   width:52px;height:52px;border-radius:50%;padding:2.5px;
@@ -183,28 +183,30 @@ html.anim .reveal.in{opacity:1;transform:none;}
   .wrap.hero-inner{
     display:grid;
     grid-template-columns:1fr 380px;
-    align-items:center;
+    align-items:stretch;
     gap:48px;
     max-width:1280px;
     margin:0 auto;
     padding-bottom:0;
   }
-  .hero-right{display:flex;flex-direction:column;order:1;}
+  .hero-right{display:flex;flex-direction:column;order:1;height:100%;}
   .hero-left{max-width:600px;}
   .hero h1{font-size:clamp(36px,3.6vw,60px);max-width:none;line-height:1.1;}
   .hero-sub{font-size:19px;max-width:48ch;}
   .hero-site-label{margin-bottom:16px;}
-  /* профиль-карточка — вертикально на десктопе */
+  /* профиль-карточка — вертикально на десктопе, заполняет высоту левой колонки */
   .profile-card{
+    flex:1;
     flex-direction:column;
     align-items:center;
-    padding:28px 22px 22px;
+    justify-content:space-evenly;
+    padding:28px 22px;
     background:rgba(0,0,0,.42);
     backdrop-filter:blur(16px);
     -webkit-backdrop-filter:blur(16px);
     border:1px solid rgba(255,255,255,.09);
     border-radius:22px;
-    gap:14px;
+    gap:0;
     text-align:center;
   }
   .hero-ava-ring{width:128px;height:128px;}
@@ -482,7 +484,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   <div class="wrap header-inner">
     <a href="#top" class="logo">
       <b>Лика <span>Рулит</span></b>
-      <small>Прокат авто · Сочи</small>
+      <small>Прокат авто · Сочи · Абхазия</small>
     </a>
     <div class="header-right">
       <a href="tel:+79180000000" class="header-phone">+7 918 000-00-00<span>Звонок · Сочи</span></a>
@@ -498,7 +500,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
     <div class="hero-left">
       <p class="hero-site-label reveal">Сайт автопроката Лики Самарцевой</p>
       <h1 class="reveal d1">Сочи — это <span class="hl">600&nbsp;км дорог</span>,<br>горы и&nbsp;Абхазия</h1>
-      <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от&nbsp;4&nbsp;500&nbsp;₽/сутки</b>. Подача за час · На день и&nbsp;долгосрок</p>
+      <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от&nbsp;4&nbsp;500&nbsp;₽/сутки</b> · <span style="white-space:nowrap">Подача за час · На&nbsp;день и&nbsp;долгосрок</span></p>
       <div class="hero-cta reveal d3">
         <a href="#catalog" class="btn btn-gold btn-lg">Выбрать машину</a>
         <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-md" target="_blank" rel="noopener">Написать в WhatsApp</a>
@@ -957,7 +959,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
       <div class="foot-brand">
         <b>Лика <span>Рулит</span></b>
         <a href="https://likarulit.ru" class="dom">likarulit.ru</a>
-        <small>Прокат авто · Сочи</small>
+        <small>Прокат авто · Сочи · Абхазия</small>
       </div>
       <nav class="foot-menu">
         <a href="catalog.html">Каталог</a>
