@@ -151,25 +151,43 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .hero-scroll .line{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:scrolldn 2s var(--ease) infinite;}
 @keyframes scrolldn{0%{transform:scaleY(0);transform-origin:top}40%{transform:scaleY(1);transform-origin:top}60%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
+/* ---- BASE: mobile-first flex stack ---- */
+.hero-inner{display:flex;flex-direction:column;}
+.hero-right{order:-1;margin-bottom:28px;}
+.hero-left{}
+
 /* ---- DESKTOP hero (≥981px) ---- */
 @media(min-width:981px){
   .hero{
     padding-bottom:110px;
     background:
-      linear-gradient(to right, #06060c 30%, rgba(6,6,12,.88) 54%, rgba(6,6,12,.18) 100%),
-      url('photos/hero-bg.webp') right center / cover no-repeat;
+      linear-gradient(rgba(6,6,14,.78),rgba(6,6,14,.78)),
+      url('photos/hero-bg.webp') center/cover no-repeat;
   }
   .hero::after{display:none;}
   .hero-grid-lines{display:none;}
   .wrap.hero-inner{
-    max-width:600px;
-    margin-left:max(48px, calc((100vw - 1280px)/2 + 48px));
-    margin-right:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    max-width:1280px;
+    margin:0 auto;
     padding-bottom:0;
   }
-  .hero h1{font-size:clamp(46px,4.8vw,76px);max-width:14ch;}
-  .hero-sub{font-size:clamp(18px,1.5vw,21px);max-width:42ch;}
-  .hero-author{margin-bottom:36px;}
+  .hero-right{order:0;display:flex;justify-content:center;align-items:center;margin-bottom:0;}
+  .hero h1{font-size:clamp(34px,3.2vw,52px);max-width:none;}
+  .hero-sub{font-size:18px;max-width:none;}
+  .hero-author{
+    flex-direction:column;align-items:center;text-align:center;gap:20px;
+    padding:36px 32px;background:rgba(255,255,255,.05);
+    border-radius:24px;border:1px solid rgba(255,255,255,.09);
+  }
+  .hero-ava-ring{width:150px;height:150px;padding:4px;}
+  .hero-author-text{text-align:center;}
+  .hero-author-text b{font-size:19px;}
+  .hero-author-text span{font-size:13px;}
+  .hero-site-label{margin-bottom:20px;}
 }
 
 /* ---- MOBILE hero (≤980px) ---- */
@@ -452,21 +470,25 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
 <section class="hero">
   <div class="hero-grid-lines"></div>
   <div class="wrap hero-inner">
-    <p class="hero-site-label reveal">Сайт автопроката Лики Самарцевой</p>
-    <a href="#lika" class="hero-author reveal d1">
-      <div class="hero-ava-ring">
-        <img src="photos/lika.jpg" alt="Лика" class="hero-ava-img">
+    <div class="hero-left">
+      <p class="hero-site-label reveal">Сайт автопроката Лики Самарцевой</p>
+      <h1 class="reveal d1">Сочи — это <span class="hl">600 км дорог</span>, горы и Абхазия</h1>
+      <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от 4 500 ₽/сутки</b>. Подача за час · На день и долгосрок</p>
+      <div class="hero-cta reveal d3">
+        <a href="#catalog" class="btn btn-gold btn-lg">Выбрать машину</a>
+        <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-lg" target="_blank" rel="noopener">Написать в WhatsApp</a>
       </div>
-      <div class="hero-author-text">
-        <b>@likarulit <span style="opacity:.3;font-weight:300;margin:0 4px">|</span> АНЖЕЛИКА</b>
-        <span>автоблогер из Сочи · 15 лет с тачками<br>сервис · автотюнинг · прокат · пригон</span>
-      </div>
-    </a>
-    <h1 class="reveal d1">Сочи — это <span class="hl">600 км дорог</span>, горы и Абхазия</h1>
-    <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от 4 500 ₽/сутки</b>. Подача за час · На день и долгосрок</p>
-    <div class="hero-cta reveal d3">
-      <a href="#catalog" class="btn btn-gold btn-lg">Выбрать машину</a>
-      <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-lg" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+    <div class="hero-right">
+      <a href="#lika" class="hero-author reveal d1">
+        <div class="hero-ava-ring">
+          <img src="photos/lika.jpg" alt="Лика" class="hero-ava-img">
+        </div>
+        <div class="hero-author-text">
+          <b>@likarulit <span style="opacity:.3;font-weight:300;margin:0 4px">|</span> АНЖЕЛИКА</b>
+          <span>автоблогер из Сочи · 15 лет с тачками<br>сервис · автотюнинг · прокат · пригон</span>
+        </div>
+      </a>
     </div>
   </div>
   <div class="hero-stats reveal d3">
