@@ -122,8 +122,9 @@ html.anim .reveal.in{opacity:1;transform:none;}
   min-height:100vh;display:flex;flex-direction:column;justify-content:center;
   padding-top:78px;overflow:hidden;
   background:
-    linear-gradient(to bottom, rgba(4,4,12,.93) 0%, rgba(4,4,12,.83) 42%, rgba(4,4,12,.58) 70%, rgba(4,4,12,.38) 100%),
-    url('photos/hero-mob.jpg') center bottom/cover no-repeat;
+    radial-gradient(120% 80% at 50% 115%, rgba(200,150,12,.30) 0%, rgba(200,150,12,0) 55%),
+    radial-gradient(90% 70% at 80% 0%, rgba(40,70,130,.45) 0%, rgba(40,70,130,0) 60%),
+    linear-gradient(160deg,#0a1628 0%,#0b0f1a 38%,#0a0a0c 70%,#070707 100%);
 }
 .hero::after{
   content:"";position:absolute;inset:0;pointer-events:none;
