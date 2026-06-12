@@ -100,6 +100,15 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .sec-title{font-family:var(--font-display);font-size:clamp(24px,3.4vw,42px);font-weight:var(--disp-weight);letter-spacing:var(--disp-ls);line-height:1.16;text-wrap:balance;}
 .sec-sub{font-size:clamp(16px,1.6vw,19px);font-weight:300;line-height:1.5;margin-top:16px;max-width:560px;}
 
+/* ---------- HERO AUTHOR ---------- */
+.hero-author{display:flex;align-items:center;gap:14px;margin-bottom:32px;}
+.hero-ava-ring{width:60px;height:60px;border-radius:50%;flex-shrink:0;padding:3px;
+  background:linear-gradient(135deg,#f9c300 0%,#f56040 25%,#df3078 50%,#813ac5 75%,#37aae0 100%);}
+.hero-ava-img{width:100%;height:100%;border-radius:50%;object-fit:cover;
+  border:2.5px solid rgba(10,16,40,.85);display:block;}
+.hero-author-text b{display:block;font-size:15px;font-weight:700;color:#fff;line-height:1.3;}
+.hero-author-text span{font-size:12px;color:#9ab;line-height:1.5;}
+
 /* ---------- HERO ---------- */
 .hero{
   min-height:100vh;display:flex;flex-direction:column;justify-content:center;
@@ -260,13 +269,16 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .lika{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,80px);align-items:center;}
 .lika-left{display:flex;flex-direction:column;align-items:center;text-align:center;}
 .lika-avatar{
-  width:230px;height:230px;border-radius:50%;
-  background:radial-gradient(120% 120% at 30% 25%,#f6c46b,#e0922b 45%,#b5610f 100%);
-  box-shadow:0 30px 60px -20px rgba(200,120,12,.55),inset 0 4px 18px rgba(255,255,255,.4);
-  display:flex;align-items:center;justify-content:center;font-size:74px;
+  width:220px;height:220px;border-radius:50%;
+  padding:4px;
+  background:linear-gradient(135deg,#f9c300 0%,#f56040 25%,#df3078 50%,#813ac5 75%,#37aae0 100%);
+  box-shadow:0 24px 56px -16px rgba(200,100,12,.45);
+  flex-shrink:0;
 }
-.lika-left h3{font-family:var(--font-display);font-size:22px;font-weight:700;margin-top:22px;}
-.lika-left span{font-size:14px;color:var(--text-dark-dim);margin-top:5px;letter-spacing:.04em;}
+.lika-avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;
+  border:3px solid #f0f0ee;display:block;}
+.lika-left h3{font-family:var(--font-display);font-size:20px;font-weight:700;margin-top:18px;}
+.lika-left span{font-size:13px;color:var(--text-dark-dim);margin-top:5px;letter-spacing:.03em;line-height:1.5;max-width:200px;}
 .lika-right p{font-size:clamp(20px,2.4vw,27px);font-weight:300;line-height:1.45;color:#1c1c1c;letter-spacing:-.01em;}
 .lika-right p b{font-weight:700;}
 .lika-right p+p{margin-top:20px;}
@@ -412,9 +424,18 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
 <section class="hero">
   <div class="hero-grid-lines"></div>
   <div class="wrap hero-inner">
-    <h1 class="reveal">Сочи — это <span class="hl">600 км дорог</span>, горы и Абхазия</h1>
-    <p class="hero-sub reveal d1">BMW, Mustang, кабриолеты — <b>от 4 500 ₽/сутки</b>. Подача за час.</p>
-    <div class="hero-cta reveal d2">
+    <div class="hero-author reveal">
+      <div class="hero-ava-ring">
+        <img src="photos/lika.jpg" alt="Лика" class="hero-ava-img">
+      </div>
+      <div class="hero-author-text">
+        <b>Лика Самарцева</b>
+        <span>автоблогер из Сочи · 15 лет с тачками<br>сервис · автотюнинг · прокат · пригон</span>
+      </div>
+    </div>
+    <h1 class="reveal d1">Сочи — это <span class="hl">600 км дорог</span>, горы и Абхазия</h1>
+    <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от 4 500 ₽/сутки</b>. Подача за час.</p>
+    <div class="hero-cta reveal d3">
       <a href="#catalog" class="btn btn-gold btn-lg">Выбрать машину</a>
       <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-lg" target="_blank" rel="noopener">Написать в WhatsApp</a>
     </div>
@@ -709,14 +730,14 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   <div class="wrap">
     <div class="lika">
       <div class="lika-left reveal">
-        <div class="lika-avatar">👩🏻</div>
-        <h3>Лика</h3>
-        <span>Сочи, с 2018 года</span>
+        <div class="lika-avatar"><img src="photos/lika.jpg" alt="Лика Самарцева"></div>
+        <h3>Лика Самарцева</h3>
+        <span>15 лет с тачками в Сочи · сервис, автотюнинг, прокат, пригон</span>
       </div>
       <div class="lika-right reveal d1">
         <p>Привет, я <b>Лика.</b></p>
-        <p>Помогаю выбрать машину под твою поездку — не «что есть», а «что подойдёт именно тебе».</p>
-        <p>BMW или Changan, кабриолет или внедорожник — расскажи куда едешь, я посоветую за 5 минут.</p>
+        <p>Занимаюсь машинами в Сочи 15 лет — сервис, автотюнинг, прокат, пригоняю авто под заказ. Это сайт про мой прокат.</p>
+        <p>Помогу выбрать машину под твою поездку — не «что есть», а «что подойдёт именно тебе». BMW или Changan, кабриолет или внедорожник — напиши куда едешь, отвечу за 5 минут.</p>
         <a href="https://wa.me/79180000000" class="btn btn-gold btn-lg" target="_blank" rel="noopener">Написать Лике в WhatsApp</a>
       </div>
     </div>
