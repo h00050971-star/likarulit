@@ -103,13 +103,17 @@ html.anim .reveal.in{opacity:1;transform:none;}
 
 /* ---------- HERO AUTHOR ---------- */
 .hero-site-label{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:20px;display:block;}
-.hero-author{display:flex;align-items:center;gap:14px;margin-bottom:32px;text-decoration:none;}
+/* profile card — mobile: горизонтальный, desktop: вертикальный */
+.profile-card{display:flex;align-items:center;gap:14px;padding:16px;background:rgba(0,0,0,.28);border-radius:16px;text-decoration:none;color:inherit;}
+.pc-avatar{flex-shrink:0;}
 .hero-ava-ring{width:80px;height:80px;border-radius:50%;flex-shrink:0;padding:3px;
   background:linear-gradient(135deg,#f9c300 0%,#f56040 25%,#df3078 50%,#813ac5 75%,#37aae0 100%);}
 .hero-ava-img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center center;
   border:2.5px solid rgba(10,16,40,.85);display:block;}
-.hero-author-text b{display:block;font-size:15px;font-weight:700;color:#fff;line-height:1.3;}
-.hero-author-text span{font-size:12px;color:#9ab;line-height:1.5;}
+.pc-info{display:flex;flex-direction:column;gap:4px;}
+.pc-name{display:block;font-size:15px;font-weight:700;color:#fff;line-height:1.3;}
+.pc-sep{opacity:.3;font-weight:300;margin:0 5px;}
+.pc-sub{font-size:12px;color:#9ab;line-height:1.5;}
 
 /* ---------- HERO ---------- */
 .hero{
@@ -156,16 +160,16 @@ html.anim .reveal.in{opacity:1;transform:none;}
 .hero-right{order:-1;margin-bottom:28px;}
 
 /* ---- DESKTOP hero (≥981px) ---- */
-/* ---- highlights CSS (global, used in hero) ---- */
-.hero-highlights{display:none;gap:16px;flex-wrap:wrap;margin-top:20px;}
-.hh-item{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:#fff;flex:0 0 auto;}
+/* ---- highlights — только десктоп ---- */
+.hero-highlights{display:none;flex-wrap:nowrap;justify-content:space-between;width:100%;margin-top:16px;}
+.hh-item{display:flex;flex-direction:column;align-items:center;gap:5px;text-decoration:none;color:#fff;flex:1 1 0;min-width:0;}
 .hh-ring{
-  width:72px;height:72px;border-radius:50%;padding:3px;
+  width:52px;height:52px;border-radius:50%;padding:2.5px;
   background:linear-gradient(135deg,#f9c300,#f56040,#df3078,#813ac5,#37aae0);
   flex-shrink:0;
 }
-.hh-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2.5px solid #0D0D0D;display:block;}
-.hh-item span{font-size:11px;font-weight:600;letter-spacing:.04em;text-align:center;opacity:.9;max-width:72px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.hh-img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid #0D0D0D;display:block;}
+.hh-item span{font-size:10px;font-weight:600;letter-spacing:.03em;text-align:center;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;}
 
 @media(min-width:981px){
   .hero{
@@ -178,27 +182,37 @@ html.anim .reveal.in{opacity:1;transform:none;}
   .hero-grid-lines{display:none;}
   .wrap.hero-inner{
     display:grid;
-    grid-template-columns:1fr 340px;
+    grid-template-columns:1fr 380px;
     align-items:center;
     gap:48px;
     max-width:1280px;
     margin:0 auto;
     padding-bottom:0;
   }
-  .hero-right{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    order:1;
-  }
+  .hero-right{display:flex;flex-direction:column;order:1;}
   .hero-left{max-width:600px;}
   .hero h1{font-size:clamp(36px,3.6vw,60px);max-width:none;line-height:1.1;}
   .hero-sub{font-size:19px;max-width:48ch;}
-  .hero-author{margin-bottom:0;}
   .hero-site-label{margin-bottom:16px;}
-  .hero-highlights{display:flex;gap:12px;}
-  .hh-ring{width:80px;height:80px;}
-  .hh-item span{font-size:12px;max-width:80px;}
+  /* профиль-карточка — вертикально на десктопе */
+  .profile-card{
+    flex-direction:column;
+    align-items:center;
+    padding:28px 22px 22px;
+    background:rgba(0,0,0,.42);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:22px;
+    gap:14px;
+    text-align:center;
+  }
+  .hero-ava-ring{width:128px;height:128px;}
+  .pc-info{align-items:center;}
+  .pc-name{font-size:16px;}
+  .pc-sub{font-size:13px;}
+  .hero-highlights{display:flex;}
+  .hh-ring{width:52px;height:52px;}
 }
 
 /* ---- MOBILE hero (≤980px) ---- */
@@ -491,40 +505,42 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
       </div>
     </div>
     <div class="hero-right">
-      <a href="#lika" class="hero-author reveal d1">
-        <div class="hero-ava-ring">
-          <img src="photos/lika.jpg" alt="Лика" class="hero-ava-img">
+      <div class="profile-card reveal d2">
+        <a href="#lika" class="pc-avatar">
+          <div class="hero-ava-ring">
+            <img src="photos/lika.jpg" alt="Лика" class="hero-ava-img">
+          </div>
+        </a>
+        <div class="pc-info">
+          <span class="pc-name">@likarulit <span class="pc-sep">|</span> АНЖЕЛИКА</span>
+          <span class="pc-sub">автоблогер из Сочи · 15 лет с тачками<br>сервис · автотюнинг · прокат · пригон</span>
         </div>
-        <div class="hero-author-text">
-          <b>@likarulit <span style="opacity:.3;font-weight:300;margin:0 4px">|</span> АНЖЕЛИКА</b>
-          <span>автоблогер из Сочи · 15 лет с тачками<br>сервис · автотюнинг · прокат · пригон</span>
+        <div class="hero-highlights">
+          <a href="#catalog" class="hh-item">
+            <div class="hh-ring"><img src="photos/ford-mustang/photo_01.jpg" alt="Mustang" class="hh-img"></div>
+            <span>Mustang</span>
+          </a>
+          <a href="#catalog" class="hh-item">
+            <div class="hh-ring"><img src="photos/chevrolet-camaro/photo_01.jpg" alt="Camaro" class="hh-img"></div>
+            <span>Camaro</span>
+          </a>
+          <a href="#catalog" class="hh-item">
+            <div class="hh-ring"><img src="photos/bmw-x5-g05/photo_01.jpg" alt="BMW X5" class="hh-img"></div>
+            <span>BMW X5</span>
+          </a>
+          <a href="#catalog" class="hh-item">
+            <div class="hh-ring"><img src="photos/bmw-230-kabriolet/photo_01.jpg" alt="Кабриолет" class="hh-img"></div>
+            <span>Кабрио</span>
+          </a>
+          <a href="#catalog" class="hh-item">
+            <div class="hh-ring"><img src="photos/audi-tt/photo_01.jpg" alt="Audi TT" class="hh-img"></div>
+            <span>Audi TT</span>
+          </a>
+          <a href="#catalog" class="hh-item">
+            <div class="hh-ring"><img src="photos/bmw-5-g30-m-sport-lci/photo_01.jpg" alt="BMW 5" class="hh-img"></div>
+            <span>BMW 5</span>
+          </a>
         </div>
-      </a>
-      <div class="hero-highlights reveal d2">
-        <a href="cars/ford-mustang.html" class="hh-item">
-          <div class="hh-ring"><img src="photos/ford-mustang/photo_01.jpg" alt="Mustang" class="hh-img"></div>
-          <span>Mustang</span>
-        </a>
-        <a href="cars/chevrolet-camaro.html" class="hh-item">
-          <div class="hh-ring"><img src="photos/chevrolet-camaro/photo_01.jpg" alt="Camaro" class="hh-img"></div>
-          <span>Camaro</span>
-        </a>
-        <a href="cars/bmw-x5-g05.html" class="hh-item">
-          <div class="hh-ring"><img src="photos/bmw-x5-g05/photo_01.jpg" alt="BMW X5" class="hh-img"></div>
-          <span>BMW X5</span>
-        </a>
-        <a href="cars/bmw-230-kabriolet.html" class="hh-item">
-          <div class="hh-ring"><img src="photos/bmw-230-kabriolet/photo_01.jpg" alt="Кабриолет" class="hh-img"></div>
-          <span>Кабриолет</span>
-        </a>
-        <a href="cars/audi-tt.html" class="hh-item">
-          <div class="hh-ring"><img src="photos/audi-tt/photo_01.jpg" alt="Audi TT" class="hh-img"></div>
-          <span>Audi TT</span>
-        </a>
-        <a href="cars/bmw-5-g30-m-sport-lci.html" class="hh-item">
-          <div class="hh-ring"><img src="photos/bmw-5-g30-m-sport-lci/photo_01.jpg" alt="BMW 5" class="hh-img"></div>
-          <span>BMW 5</span>
-        </a>
       </div>
     </div>
   </div>
