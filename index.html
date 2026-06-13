@@ -475,6 +475,9 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
 .fab svg{width:32px;height:32px;fill:#fff;}
 .fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:pulse 2.4s var(--ease) infinite;}
 @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+.fab-tg{background:#2CA5E0;box-shadow:0 12px 30px rgba(44,165,224,.45);bottom:98px;}
+.fab-tg:hover{box-shadow:0 16px 38px rgba(44,165,224,.6);}
+.fab-tg::after{border-color:#2CA5E0;}
 
 @media(max-width:880px){
   .steps,.routes,.rev-grid{grid-template-columns:repeat(2,1fr);}
@@ -487,6 +490,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   .foot-grid{gap:32px;}
   .final-facts{flex-direction:column;gap:18px;align-items:center;}
   .fab{right:16px;bottom:16px;width:56px;height:56px;}
+  .fab-tg{bottom:84px;}
 }
 </style>
 </head>
@@ -495,7 +499,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
 <!-- ================= DISCOUNT BANNER ================= -->
 <div class="disc-banner" id="discBanner" style="display:none">
   <div class="wrap">
-    <span class="disc-banner-text">Берёшь на неделю и дольше? Цена другая — <a href="https://wa.me/79180000000" target="_blank" rel="noopener">спроси в WhatsApp</a></span>
+    <span class="disc-banner-text">Берёшь на неделю и дольше? Цена другая — <a href="https://wa.me/79180008860" target="_blank" rel="noopener">спроси в WhatsApp</a></span>
     <button class="disc-close" onclick="document.getElementById('discBanner').classList.add('hidden')" aria-label="Закрыть">×</button>
   </div>
 </div>
@@ -508,8 +512,8 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
       <small>Прокат авто · Сочи · Абхазия</small>
     </a>
     <div class="header-right">
-      <a href="tel:+79180000000" class="header-phone">+7 918 000-00-00<span>Звонок · Сочи</span></a>
-      <a href="https://wa.me/79180000000" class="btn btn-gold btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="tel:+79180008860" class="header-phone">+7 918 000 88-60<span>Звонок · Сочи</span></a>
+      <a href="https://wa.me/79180008860" class="btn btn-gold btn-sm" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </header>
@@ -524,7 +528,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
       <p class="hero-sub reveal d2">BMW, Mustang, кабриолеты — <b>от&nbsp;4&nbsp;500&nbsp;₽/сутки</b> <span class="sub-nowrap">· Подача за час · На&nbsp;день и&nbsp;долгосрок</span></p>
       <div class="hero-cta reveal d3">
         <a href="#catalog" class="btn btn-gold btn-lg">Выбрать машину</a>
-        <a href="https://wa.me/79180000000" class="btn btn-ghost-light btn-md" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        <a href="https://wa.me/79180008860" class="btn btn-ghost-light btn-md" target="_blank" rel="noopener">+7 918 000 88-60</a>
       </div>
     </div>
     <div class="hero-right">
@@ -807,21 +811,21 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
         <div class="ls-days">7 дней</div>
         <div class="ls-label">и больше</div>
         <div class="ls-desc">Неделя у моря, командировка, отпуск без лишних расходов. Один раз договорился — едешь спокойно.</div>
-        <div class="ls-cta"><a href="https://wa.me/79180000000" target="_blank" rel="noopener">Спросить цену →</a></div>
+        <div class="ls-cta"><a href="https://wa.me/79180008860" target="_blank" rel="noopener">Спросить цену →</a></div>
       </div>
       <div class="ls-card reveal d2">
         <span class="ls-badge">−15%</span>
         <div class="ls-days">14 дней</div>
         <div class="ls-label">и больше</div>
         <div class="ls-desc">Две недели — и цена за день уже заметно ниже. Хороший вариант для тех, кто работает в Сочи или переезжает на лето.</div>
-        <div class="ls-cta"><a href="https://wa.me/79180000000" target="_blank" rel="noopener">Спросить цену →</a></div>
+        <div class="ls-cta"><a href="https://wa.me/79180008860" target="_blank" rel="noopener">Спросить цену →</a></div>
       </div>
       <div class="ls-card reveal d3">
         <span class="ls-badge">−20%</span>
         <div class="ls-days">30 дней</div>
         <div class="ls-label">и больше</div>
         <div class="ls-desc">Месяц выходит дешевле любого каршеринга. Своя машина, без ограничений по пробегу, можно в Абхазию.</div>
-        <div class="ls-cta"><a href="https://wa.me/79180000000" target="_blank" rel="noopener">Спросить цену →</a></div>
+        <div class="ls-cta"><a href="https://wa.me/79180008860" target="_blank" rel="noopener">Спросить цену →</a></div>
       </div>
     </div>
   </div>
@@ -868,7 +872,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
         <p>Привет, я <b>Лика.</b></p>
         <p>Занимаюсь машинами в Сочи 15 лет — сервис, автотюнинг, прокат, пригоняю авто под заказ. Это сайт про мой прокат.</p>
         <p>Помогу выбрать машину под твою поездку — не «что есть», а «что подойдёт именно тебе». BMW или Changan, кабриолет или внедорожник — напиши куда едешь, отвечу за 5 минут.</p>
-        <a href="https://wa.me/79180000000" class="btn btn-gold btn-lg" target="_blank" rel="noopener">Написать Лике в WhatsApp</a>
+        <a href="https://wa.me/79180008860" class="btn btn-gold btn-lg" target="_blank" rel="noopener">Написать Лике в WhatsApp</a>
       </div>
     </div>
   </div>
@@ -966,7 +970,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   <div class="wrap final-inner">
     <h2 class="reveal">Какую дату планируешь?</h2>
     <p class="reveal d1">Напиши — подберём машину и ответим за 10 минут</p>
-    <div class="reveal d2"><a href="https://wa.me/79180000000" class="btn btn-gold btn-lg" target="_blank" rel="noopener">Написать в WhatsApp</a></div>
+    <div class="reveal d2"><a href="https://wa.me/79180008860" class="btn btn-gold btn-lg" target="_blank" rel="noopener">Написать в WhatsApp</a></div>
     <div class="final-facts reveal d3">
       <div class="final-fact"><span class="fi">⚡</span> Ответим за 10 минут</div>
       <div class="final-fact"><span class="fi">🚗</span> Доставим куда скажешь</div>
@@ -991,7 +995,7 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
         <a href="#">Контакты</a>
       </nav>
       <div class="foot-social">
-        <a href="https://wa.me/79180000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+        <a href="https://wa.me/79180008860" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
         <a href="https://t.me/likarulit" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0m5.6 8.2-1.9 8.9c-.1.6-.5.8-1 .5l-2.8-2.1-1.4 1.3c-.1.1-.3.3-.6.3l.2-2.9 5.2-4.7c.2-.2-.1-.3-.3-.1L8.3 13l-2.8-.9c-.6-.2-.6-.6.1-.9l11-4.3c.5-.2 1 .1.8.9"/></svg></a>
         <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2 0 1.8.3 2.2.4.6.2 1 .4 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.3 1.8-.4 2.2-.2.6-.4 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.3-2.2-.4-.6-.2-1-.4-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c0-1.2.3-1.8.4-2.2.2-.6.4-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4 1.3-.1 1.7-.1 4.9-.1M12 0C8.7 0 8.3 0 7 .1 5.7.1 4.8.4 4.1.7c-.8.3-1.4.7-2.1 1.3C1.4 2.7 1 3.3.7 4.1.4 4.8.1 5.7.1 7 0 8.3 0 8.7 0 12s0 3.7.1 5c0 1.3.3 2.2.6 2.9.3.8.7 1.4 1.3 2.1.7.6 1.3 1 2.1 1.3.7.3 1.6.6 2.9.6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3 0 2.2-.3 2.9-.6.8-.3 1.4-.7 2.1-1.3.6-.7 1-1.3 1.3-2.1.3-.7.6-1.6.6-2.9.1-1.3.1-1.7.1-5s0-3.7-.1-5c0-1.3-.3-2.2-.6-2.9-.3-.8-.7-1.4-1.3-2.1-.7-.6-1.3-1-2.1-1.3-.7-.3-1.6-.6-2.9-.6C15.7 0 15.3 0 12 0m0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4m0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8m7.8-10.4a1.4 1.4 0 1 1-2.9 0 1.4 1.4 0 0 1 2.9 0"/></svg></a>
         <a href="#" target="_blank" rel="noopener" aria-label="Авито"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="9" r="3.2"/><circle cx="17" cy="6.5" r="2.4"/><circle cx="8.5" cy="18" r="2.4"/><circle cx="17.5" cy="16" r="4"/></svg></a>
@@ -1001,8 +1005,11 @@ footer{background:var(--dark);padding:64px 0 34px;border-top:1px solid rgba(255,
   </div>
 </footer>
 
-<!-- ================= FLOATING WHATSAPP ================= -->
-<a href="https://wa.me/79180000000" class="fab" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+<!-- ================= FLOATING BUTTONS ================= -->
+<a href="https://t.me/+79180008860" class="fab fab-tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+</a>
+<a href="https://wa.me/79180008860" class="fab" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
   <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
